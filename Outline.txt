@@ -1,0 +1,9 @@
+Features to add:
+	- Past Performances
+	- Members
+	- Alumni
+	- Awards
+	- Contact Us
+	- Hyperlinks to Facebook, twitter, etc. 
+	- Donations? 
+		- Need to figure out how to implement this 
