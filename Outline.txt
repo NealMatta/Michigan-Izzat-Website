@@ -7,3 +7,5 @@ Features to add:
 	- Hyperlinks to Facebook, twitter, etc. 
 	- Donations? 
 		- Need to figure out how to implement this 
+
+Izzat logo --> Techno Hideo, Gold, IZSAT
