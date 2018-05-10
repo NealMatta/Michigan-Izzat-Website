@@ -22,7 +22,8 @@ Grouping:
 	- Brand (Home)
 	- About (Need better name than this)
 		- About Izzat
-		- Performances
+	- Events
+		- Past Performances
 		- Awards
 		- Mixes? Not really neccesary
 	- Members

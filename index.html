@@ -10,16 +10,18 @@
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Javascript -->
+  
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/landing.js"></script>
+
 
   <!-- Font Styles -->
   <link href="https://fonts.googleapis.com/css?family=Jura:600" rel="stylesheet">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  </script>
 
 </head>
 
@@ -31,11 +33,14 @@
   </video>
 
   <div class="content">
-    <h1 class="logo">IZSAT</h1>
+    <a href="index.html" style="text-decoration: none;"><h1 class="logo">IZSAT</h1></a>
     <div class="NavBarLinks">
       <ul class="nav flex-column">
         <li class="nav-item">
           <a class="nav-link active" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Events</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Members</a>
@@ -49,8 +54,8 @@
       </ul>
     </div>
     <div style="left: 0;">
-      <button id="pauseBTN" class="landingBTN" onclick="pause()"><i class="fas fa-pause"></i></button>
-      <button id="muteBTN" class="landingBTN" onclick="mute()"><i class="fas fa-volume-off"></i></button>
+      <button id="pauseBTN" class="landingBTN " onclick="pause()"><i class="fas fa-pause"></i></button>
+      <button id="muteBTN" class="landingBTN " onclick="mute()"><i class="fas fa-volume-up"></i></button>
     </div>
 
   </div>
@@ -73,17 +78,33 @@
   <script type="text/javascript">
     // Get the video
     var video = document.getElementById("myVideo");
-    // Get the button
-    var btn = document.getElementById("myBtn");
     // Pause and play the video, and change the button text
     function pause() {
-      if (video.paused) { video.play(); }
-      else { video.pause(); }
+      if (video.paused) {
+        video.play();
+        $("#pauseBTN").click(function() {
+          $(this).find("i").removeClass("fas fa-play").addClass("fas fa-pause");
+        });
+      } else {
+        video.pause();
+        $("#pauseBTN").click(function() {
+          $(this).find("i").removeClass("fas fa-pause").addClass("fas fa-play");
+        });
+      }
     }
 
     function mute() {
-      if (video.muted) { video.muted = false; }
-      else { video.muted = true; }
+      if (video.muted) {
+        video.muted = false;
+        $("#muteBTN").click(function() {
+          $(this).find("i").removeClass("fas fa-volume-up").addClass("fas fa-volume-off");
+        });
+      } else {
+        video.muted = true;
+        $("#muteBTN").click(function() {
+          $(this).find("i").removeClass("fas fa-volume-off").addClass("fas fa-volume-up");
+        });
+      }
     }
   </script>
 

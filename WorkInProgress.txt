@@ -1,8 +1,7 @@
 - Need to make the website mobile responsive
 ~~~ Landing Page ~~~
-- Change IZZAT logo so it always spans a certain size
 - need to make the hyperlinks better font
 - Change pause to play when paused and play to pause when played
-  - Same with sound on or off
-- Better background video
-- Split past up into more things?
+  - Need to fix javascript and Jquery
+- Higher Quality background video
+- Have 7 different videos for different days?
