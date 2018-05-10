@@ -7,7 +7,7 @@
 
 .logo {
   font-family: logo;
-  font-size: 100px;
+  font-size: 7vw;
   color: Gold;
 }
 
@@ -38,7 +38,7 @@
 /* Editing all of the nav bar directory pages  */
 .NavBarLinks ul li a{
   /* background: yellow; */
-  font-size: 25px;
+  font-size: 1.7vw;
   text-align: left;
   font-family: 'Jura', sans-serif;
 }
