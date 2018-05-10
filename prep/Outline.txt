@@ -1,0 +1,41 @@
+Features to add:
+	- Past Performances
+	- Members
+		- Alumni
+	- Awards
+	- Contact Us
+		- Hyperlinks to Facebook, twitter, etc.
+		- Instagram feed?
+	- Donate pls
+		- Use Paypal donation link
+
+Izzat logo --> Techno Hideo, Gold, IZSAT
+
+Grouping:
+~~~ Overall ~~~
+- Nav Bar
+	Other
+	- Sticky
+	- Gradient so can see the background
+	- Top of every page
+	Order
+	- Brand (Home)
+	- About (Need better name than this)
+		- About Izzat
+		- Performances
+		- Awards
+		- Mixes? Not really neccesary
+	- Members
+		- Past
+		- Present
+	- Contact Us
+		- Social Media Hyperlinks
+		- PHP Email format thing
+	- Donate
+- Footer
+	- Look at Footer Idea
+
+~~~ Landing ~~~
+- Video bit blurred in background with IZZAT logo on top
+- No nav bar?
+	- Need fix around this then
