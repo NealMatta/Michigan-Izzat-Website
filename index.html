@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Javascript -->
-  
+
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -26,52 +26,41 @@
 </head>
 
 <body>
-
-  <!-- The video -->
-  <video autoplay muted loop id="myVideo">
+  <!-- NAV BAR -->
+  <nav>
+    <!-- The video -->
+    <video autoplay muted loop id="myVideo">
     <source src="images/landing/test.mp4" type="video/mp4">
   </video>
 
-  <div class="content">
-    <a href="index.html" style="text-decoration: none;"><h1 class="logo">IZSAT</h1></a>
-    <div class="NavBarLinks">
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Events</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Members</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Donate</a>
-        </li>
-      </ul>
+    <div class="content">
+      <a href="index.html" style="text-decoration: none;"><h1 class="logo">IZSAT</h1></a>
+      <div class="NavBarLinks">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Donate</a>
+          </li>
+        </ul>
+      </div>
+      <div style="left: 0;">
+        <button id="pauseBTN" class="landingBTN " onclick="pause()"><i class="fas fa-pause"></i></button>
+        <button id="muteBTN" class="landingBTN " onclick="mute()"><i class="fas fa-volume-up"></i></button>
+      </div>
+
     </div>
-    <div style="left: 0;">
-      <button id="pauseBTN" class="landingBTN " onclick="pause()"><i class="fas fa-pause"></i></button>
-      <button id="muteBTN" class="landingBTN " onclick="mute()"><i class="fas fa-volume-up"></i></button>
-    </div>
-
-  </div>
-
-  <!-- Optional: some overlay text to describe the video -->
-  <!-- <div class="container" style="margin-left: 0; left: 0; padding-left: 0;"> -->
-
-  <!-- <div class="content">
-          <h1>Heading</h1>
-          <p>Lorem ipsum...</p>
-          <!-- Use a button to pause/play the video with JavaScript -->
-
-  </div> -->
-
-
-  <!-- </div> -->
+  </nav>
 
 
   <!-- Javascript -->
