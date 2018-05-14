@@ -10,6 +10,10 @@ Features to add:
 		- Use Paypal donation link
 
 Izzat logo --> Techno Hideo, Gold, IZSAT
+Color Scheme for sections:
+- #191919
+- #ebeeee
+- #fff
 
 Grouping:
 ~~~ Overall ~~~
@@ -22,13 +26,14 @@ Grouping:
 	- Brand (Home)
 	- About (Need better name than this)
 		- About Izzat
+		Members
+			- Past
+			- Present
 	- Events
 		- Past Performances
 		- Awards
 		- Mixes? Not really neccesary
-	- Members
-		- Past
-		- Present
+
 	- Contact Us
 		- Social Media Hyperlinks
 		- PHP Email format thing

@@ -60,7 +60,7 @@
   color: #337ab7;
 }
 
-/* ABOUT US PAGE */
+/* ~~~~~~~~~~~~~~~~~~~~~ ABOUT US PAGE ~~~~~~~~~~~~~~~~~~~~~ */
 
 .sidenav {
   height: 100%;
@@ -79,7 +79,6 @@
   overflow-x: hidden;
   /* Disable horizontal scroll */
   padding-top: 20px;
-
   /* Place content 60px from the top */
   transition: 0.5s;
   /* 0.5 second transition effect to slide in the sidenav */
@@ -110,7 +109,6 @@
   right: 25px; */
   font-size: 4em;
   margin-left: 90%;
-
   /* position: absolute;
   vertical-align: middle;
   display: flex;
@@ -142,20 +140,28 @@
 /* Plus Button for the landing portion */
 
 .maxminBTN {
-  font-size: 1.5em;
+  font-size: 5em;
   border: none;
   background: transparent;
   /* color: gold; */
   cursor: pointer;
+  color: gold;
 }
 
-.test {
-  position: fixed;
-  vertical-align: middle;
+/* Aligning the button correctly */
+
+.openNavBTN {
+  position: absolute;
+  /* vertical-align: middle; */
   display: flex;
   align-items: center;
-  color: gold;
   height: 100%;
-  font-size: 3em;
   padding-left: 1%;
+}
+
+.pageBackgroundIMG {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }

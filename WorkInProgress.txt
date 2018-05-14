@@ -5,3 +5,7 @@
   - Need to fix javascript and Jquery
 - Higher Quality background video
 - Have 7 different videos for different days?
+
+~~~ About us Page ~~~
+- Somehow credit the photographer
+- Change from black background to something else.

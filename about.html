@@ -24,31 +24,9 @@
 </head>
 
 <body>
-  <!-- <div class="content sidenav" id="mySidenav" >
-    <a href="index.html" style="text-decoration: none;"><h1 class="logo">IZSAT</h1></a>
-    <div class="NavBarLinks">
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link active" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Events</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Members</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Donate</a>
-        </li>
-      </ul>
-    </div>
-  </div> -->
-  <div id="mySidenav" class="sidenav ">
 
-    <a href="index.html" style="text-decoration: none;"><h1 class="logo">IZSAT</h1></a>
+  <div id="mySidenav" class="sidenav">
+    <a href="index.html" style="text-decoration: none; "><h1 class="logo">IZSAT</h1></a>
     <div class="NavBarLinks">
       <ul class="nav flex-column">
         <li class="nav-item">
@@ -57,9 +35,9 @@
         <li class="nav-item">
           <a class="nav-link active" href="#">Events</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="#">Members</a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link" href="#">Contact Us</a>
         </li>
@@ -70,10 +48,40 @@
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     </div>
   </div>
-  <div class="test" >
+
+  <div class="openNavBTN" style="position: fixed;">
     <span onclick="openNav()"><i class="fas fa-plus maxminBTN"></i></span>
   </div>
 
+  <div class="" style="background: black;">
+    <img src="images/Group/G1.png" alt="Group Photo" class="pageBackgroundIMG">
+  </div>
+
+  <section style=" background: #white;">
+    <div class="container">
+      <h1>Who are we?</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+    </div>
+  </section>
+
+  <section style=" background: #F0E1A4;">
+    <div class="container">
+      <h1>The Boiz</h1>
+      <h3>Active</h3>
+      <h3>Alumni</h3>
+    </div>
+  </section>
+
+
+  <!-- <h1>HI HI </h1> -->
 
 
   <script type="text/javascript">
@@ -81,12 +89,14 @@
     function openNav() {
       document.getElementById("mySidenav").style.width = "20%";
       document.getElementById("mySidenav").style.padding = "20px";
+      document.getElementById("mySidenav").style.overflow = "visible";
     }
 
     /* Set the width of the side navigation to 0 */
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
       document.getElementById("mySidenav").style.padding = "0";
+      document.getElementById("mySidenav").style.overflow = "hidden";
     }
   </script>
 
