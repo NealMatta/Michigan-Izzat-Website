@@ -3,6 +3,7 @@
 body {
   width: 100%;
   min-height: 100%;
+  font-family: 'Jura', sans-serif;
 }
 
 .sidenav {
@@ -18,11 +19,8 @@ body {
   /* Stay at the top */
   left: 0;
   background-color: #111;
-  /*Black*/
   overflow-x: hidden;
-  /* Disable horizontal scroll */
   padding-top: 20px;
-  /* Place content 60px from the top */
   transition: 0.5s;
   /* 0.5 second transition effect to slide in the sidenav */
 }
@@ -111,7 +109,6 @@ body {
 
 .eachSection {
   width: 60%;
-  font-family: 'Jura', sans-serif;
 }
 
 /* Gradient transparent - color - transparent */
@@ -145,12 +142,16 @@ hr.style-two {
   display: inline-flex;
 }
 
+.footerLinks {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
 .footerLinks ul>li>a {
   position: relative;
   display: block;
   padding: 10px 15px;
   text-decoration: none;
-  font-family: 'Jura', sans-serif;
   color: white;
   text-transform: uppercase;
   transition: 0.3s ease-in-out;
@@ -160,15 +161,108 @@ hr.style-two {
   color: gold;
 }
 
+.footerLogo:hover {
+  text-decoration: none;
+}
+
+.footerLogo h1 {
+  font-size: 4em;
+}
+
+/* Hyperlinks to the different social media outlets */
+
 .social-icons {
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  padding-bottom: 40px;
+  /* padding: 0; */
+  /* margin: 0; */
+  /* text-align: center; */
+  margin-left: -40px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.social-icons ul {
   list-style-type: none;
   display: inline-flex;
 }
 
-.social-icons ul li a i{
-  padding: 10px 15px;
+.social-icons ul>li>a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #bbbbbb;
+  color: #1f1f1f;
+  line-height: 30px;
+  font-size: 15px;
+  border-radius: 100%;
+  transition: 0.3s ease-in-out;
+  margin: 0 10px;
+  background-color: gold;
+}
+
+.social-icons ul>li>a:hover {
+  color: #fff;
+}
+
+/* ID for hyperlink to Neal Matta's website */
+
+#Neal {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s ease-in-out;
+}
+
+#Neal:hover {
+  color: gold;
+}
+
+/* Images of the members */
+
+.memberPics {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.memberPics img {
+  width: 100%;
+  border-radius: 100%;
+  border: solid 3px gold;
+}
+
+.memberPics h4 {
+  font-size: 100%;
+}
+
+.memberPics h3 {
+  font-size: 100%;
+}
+
+#note{
+  text-align: center;
+  color: #333;
+  font-size: 75%;
+}
+
+.ActiveAlumBTN{
+  margin-bottom: 10px;
+}
+.ActiveAlumBTN button{
+  border: solid 3px gold;
+  font-size: 30px;
+  border-radius: 10%;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+}
+
+.ActiveAlumBTN button:hover{
+  background-color: #1f1f1f;
+  color: gold;
+
+}
+
+#copyright{
+  color: #595959;re
+}
+
+.eachSectionTitle{
+  font-weight: 700;
 }

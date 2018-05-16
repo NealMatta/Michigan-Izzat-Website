@@ -8,7 +8,8 @@
 
 ~~~ About us Page ~~~
 - Somehow credit the photographer
-- Font style and color needs to change
-- maybe add more padding on the sides and center the headers
-- Make the nav bar opacity increase
-- 
+- Change logo to Pic in footer
+- Add page title on picture
+- Add Captains, chairs, etc.
+- Use MongoDB to store information
+- Make the transitions smoother for opening Alumni and Current members
