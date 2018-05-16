@@ -1,4 +1,6 @@
+~~~ Overall ~~~
 - Need to make the website mobile responsive
+- Loading screen? 
 ~~~ Landing Page ~~~
 - need to make the hyperlinks better font
 - Change pause to play when paused and play to pause when played
