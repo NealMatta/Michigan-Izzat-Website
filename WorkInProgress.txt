@@ -8,4 +8,7 @@
 
 ~~~ About us Page ~~~
 - Somehow credit the photographer
-- Change from black background to something else.
+- Font style and color needs to change
+- maybe add more padding on the sides and center the headers
+- Make the nav bar opacity increase
+- 
