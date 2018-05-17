@@ -1,6 +1,8 @@
 ~~~ Overall ~~~
 - Need to make the website mobile responsive
-- Loading screen? 
+- Loading screen?
+- Change Plus sign to menu bar
+
 ~~~ Landing Page ~~~
 - need to make the hyperlinks better font
 - Change pause to play when paused and play to pause when played
@@ -15,3 +17,7 @@
 - Add Captains, chairs, etc.
 - Use MongoDB to store information
 - Make the transitions smoother for opening Alumni and Current members
+
+~~~ Events ~~~
+- Need to populate the mixes and past performances with relevant information
+- Maybe MondoDB This as well? 

@@ -236,16 +236,17 @@ hr.style-two {
   font-size: 100%;
 }
 
-#note{
+#note {
   text-align: center;
   color: #333;
   font-size: 75%;
 }
 
-.ActiveAlumBTN{
+.ActiveAlumBTN {
   margin-bottom: 10px;
 }
-.ActiveAlumBTN button{
+
+.ActiveAlumBTN button {
   border: solid 3px gold;
   font-size: 30px;
   border-radius: 10%;
@@ -253,16 +254,16 @@ hr.style-two {
   font-weight: 600;
 }
 
-.ActiveAlumBTN button:hover{
+.ActiveAlumBTN button:hover {
   background-color: #1f1f1f;
   color: gold;
-
 }
 
-#copyright{
-  color: #595959;re
+#copyright {
+  color: #595959;
+  re
 }
 
-.eachSectionTitle{
+.eachSectionTitle {
   font-weight: 700;
 }
