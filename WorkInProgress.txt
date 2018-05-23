@@ -1,19 +1,17 @@
 ~~~ Overall ~~~
 - Need to make the website mobile responsive
-- Loading screen?
 - Change Plus sign to menu bar
+- Favicon
+- Change logo to Pic in footer
 
 ~~~ Landing Page ~~~
-- need to make the hyperlinks better font
 - Change pause to play when paused and play to pause when played
   - Need to fix javascript and Jquery
 - Higher Quality background video
-- Have 7 different videos for different days?
+- Have 7 different videos for different days
 
 ~~~ About us Page ~~~
 - Somehow credit the photographer
-- Change logo to Pic in footer
-- Add page title on picture
 - Add Captains, chairs, etc.
 - Use MongoDB to store information
 - Make the transitions smoother for opening Alumni and Current members
@@ -23,9 +21,10 @@
 - Maybe MondoDB This as well?
 
 ~~~ Contact Us ~~~
+- Set up form to automatically send an email 
 
 ~~~ Donate ~~~
-- Need Paypal information to do this 
+- Need Paypal information to do this
 - Small Q&A
   - Is my donation secure?
   - Why should I donate?
