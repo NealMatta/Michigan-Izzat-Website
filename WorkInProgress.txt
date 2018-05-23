@@ -3,6 +3,7 @@
 - Change Plus sign to menu bar
 - Favicon
 - Change logo to Pic in footer
+- Tryouts page
 
 ~~~ Landing Page ~~~
 - Change pause to play when paused and play to pause when played
@@ -21,7 +22,7 @@
 - Maybe MondoDB This as well?
 
 ~~~ Contact Us ~~~
-- Set up form to automatically send an email 
+- Set up form to automatically send an email
 
 ~~~ Donate ~~~
 - Need Paypal information to do this
