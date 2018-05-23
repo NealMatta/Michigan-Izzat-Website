@@ -1,20 +1,4 @@
-/* LANDING PAGE */
-
-/* Used for the IZZAT Logo */
-
-@font-face {
-  font-family: logo;
-  src: url(font/techno_hideo.ttf);
-}
-
-.logo {
-  font-family: logo;
-  font-size: 7vw;
-  color: Gold;
-}
-
-/* Style the video: 100% width and height to cover the entire window */
-
+/* Background Video of landing page */
 #myVideo {
   position: fixed;
   right: 0;
@@ -23,8 +7,7 @@
   min-height: 100%;
 }
 
-/* Add some content at the bottom of the video/page */
-
+/* Nav bar on the left hand side of landing page */
 .content {
   position: fixed;
   left: 0;
@@ -49,6 +32,7 @@
   font-weight: 600;
 }
 
+/* Pause and Play Buttons */
 .landingBTN {
   font-size: 1.5em;
   border: none;

@@ -1,6 +1,5 @@
 ~~~ Overall ~~~
 - Need to make the website mobile responsive
-- Change Plus sign to menu bar
 - Favicon
 - Change logo to Pic in footer
 - Tryouts page

@@ -1,0 +1,232 @@
+/* CSS Elements used in all pages */
+
+body {
+  width: 100%;
+  min-height: 100%;
+  font-family: 'Jura', sans-serif;
+  font-weight: 400;
+}
+
+/* IZZAT Logo */
+@font-face {
+  font-family: logo;
+  src: url(font/techno_hideo.ttf);
+}
+
+.logo {
+  font-family: logo;
+  font-size: 7vw;
+  color: Gold;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: 0.5s;
+
+}
+
+/* The navigation menu links */
+
+.sidenav a {
+  /* padding: 8px 8px 8px 32px; */
+  text-decoration: none;
+  font-size: 25px;
+  /* color: #818181; */
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+  color: #337ab7;
+}
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+  /* position: absolute; */
+  /* top: 0;
+  right: 25px; */
+  font-size: 4em;
+  margin-left: 90%;
+  /* position: absolute;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  color: gold;
+  height: 100%;
+  font-size: 3em;
+  padding-left: 1%; */
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/* Plus Button for the landing portion */
+
+.maxminBTN {
+  font-size: 5em;
+  border: none;
+  background: transparent;
+  /* color: gold; */
+  cursor: pointer;
+  color: gold;
+}
+
+/* Aligning the button correctly */
+
+.openNavBTN {
+  position: absolute;
+  /* vertical-align: middle; */
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 1%;
+}
+
+.pageBackgroundIMG {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.eachSection {
+  width: 60%;
+}
+
+/* Gradient transparent - color - transparent */
+
+hr.style-two {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  width: 75%;
+  margin-bottom: 0;
+}
+
+.eachSection h1 {
+  text-align: center;
+}
+
+/* Footer */
+
+#footer {
+  width: 100%;
+  background-color: #1f1f1f;
+  position: relative;
+  padding: 2%;
+  text-align: center;
+}
+
+.footer-nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  display: inline-flex;
+}
+
+.footerLinks {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.footerLinks ul>li>a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+
+.footerLinks ul>li>a:hover {
+  color: gold;
+}
+
+.footerLogo:hover {
+  text-decoration: none;
+}
+
+.footerLogo h1 {
+  font-size: 4em;
+}
+
+/* Hyperlinks to the different social media outlets */
+
+.social-icons {
+  /* padding: 0; */
+  /* margin: 0; */
+  /* text-align: center; */
+  margin-left: -40px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.social-icons ul {
+  list-style-type: none;
+  display: inline-flex;
+}
+
+.social-icons ul>li>a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #bbbbbb;
+  color: #1f1f1f;
+  line-height: 30px;
+  font-size: 15px;
+  border-radius: 100%;
+  transition: 0.3s ease-in-out;
+  margin: 0 10px;
+  background-color: gold;
+}
+
+.social-icons ul>li>a:hover {
+  color: #fff;
+}
+
+/* ID for hyperlink to Neal Matta's website */
+
+#Neal {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s ease-in-out;
+}
+
+#Neal:hover {
+  color: gold;
+}
+
+#copyright {
+  color: #595959;
+}
+
+.eachSectionTitle {
+  font-weight: 700;
+}
