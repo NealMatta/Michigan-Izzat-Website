@@ -17,17 +17,13 @@
 - Make the transitions smoother for opening Alumni and Current members
 
 ~~~ Events ~~~
-- Need to populate the mixes and past performances with relevant information
-- Maybe MondoDB This as well?
 
 ~~~ Contact Us ~~~
 - Set up form to automatically send an email
+  - Need to test once I launch
 
 ~~~ Donate ~~~
 - Need Paypal information to do this
 - Small Q&A
-  - Is my donation secure?
-  - Why should I donate?
-  - What are other ways to support Michigan Izzat?
   - Interested in sponsoring?
     - Refer to contact sections

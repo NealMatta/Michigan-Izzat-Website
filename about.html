@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="css/about.css">
   <link rel="stylesheet" href="css/overall.css">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
   <!-- Javascript -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -74,8 +77,8 @@
       <h1 class="eachSectionTitle">The Boahz</h1>
       <p id="note"><i>Click on the buttons to see all the members</i></p>
       <div class="ActiveAlumBTN">
-        <button type="button" onclick="togActive()">Active</button>
-        <button type="button" onclick="togAlum()">Alumni</button>
+        <button type="button" onclick="togActiveAlum('Active')">Active</button>
+        <button type="button" onclick="togActiveAlum('Alumni')">Alumni</button>
       </div>
 
       <div class="row">
@@ -111,7 +114,6 @@
         </div>
       </div>
 
-      <hr id="hrDivider" class="divider" style="display: none;">
 
       <div class="row">
         <div id="Alumni" style="display: none">
@@ -227,6 +229,19 @@
           document.getElementById("hrDivider").style.display = 'inherit';
         }
       }
+    }
+
+    function togActiveAlum(ActiveOrAlum) {
+      var members = ActiveOrAlum;
+
+      if (members === "Active"){
+        document.getElementById("Active").style.display = "inherit"
+        document.getElementById("Alumni").style.display = "none"
+      } else{
+        document.getElementById("Active").style.display = "none"
+        document.getElementById("Alumni").style.display = "inherit"
+      }
+
     }
   </script>
 
