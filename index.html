@@ -39,7 +39,7 @@
       <a href="index.html" style="text-decoration: none;"><h1 class="logo">IZSAT</h1></a>
       <div class="NavBarLinks">
         <ul class="nav flex-column">
-          <li class="nav-item">
+          <li class="nav-item" id="workpls">
             <a class="nav-link active" href="about.html">About</a>
           </li>
           <li class="nav-item">
@@ -71,30 +71,32 @@
     var video = document.getElementById("myVideo");
     // Pause and play the video, and change the button text
     function pause() {
+      var t1 = document.getElementById("pauseBTN");
+      var t2 = t1.querySelector("i");
       if (video.paused) {
         video.play();
-        $("#pauseBTN").click(function() {
-          $(this).find("i").removeClass("fas fa-play").addClass("fas fa-pause");
-        });
+        t2.classList.add("fa-pause");
+        t2.classList.remove("fa-play");
       } else {
         video.pause();
-        $("#pauseBTN").click(function() {
-          $(this).find("i").removeClass("fas fa-pause").addClass("fas fa-play");
-        });
+        t2.classList.add("fa-play");
+        t2.classList.remove("fa-pause");
       }
     }
 
     function mute() {
+      var t1 = document.getElementById("muteBTN");
+      var t2 = t1.querySelector("i");
       if (video.muted) {
         video.muted = false;
-        $("#muteBTN").click(function() {
-          $(this).find("i").removeClass("fas fa-volume-up").addClass("fas fa-volume-off");
-        });
+        t2.classList.remove("fa-volume-up");
+        t2.classList.add("fa-volume-off");
+
       } else {
         video.muted = true;
-        $("#muteBTN").click(function() {
-          $(this).find("i").removeClass("fas fa-volume-off").addClass("fas fa-volume-up");
-        });
+        t2.classList.add("fa-volume-up");
+        t2.classList.remove("fa-volume-off");
+
       }
     }
   </script>
