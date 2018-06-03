@@ -27,13 +27,14 @@
 
 </head>
 
-<body>
+<body onload="background()">
   <!-- NAV BAR -->
   <nav>
+
     <!-- The video -->
     <video autoplay muted loop id="myVideo">
-    <source src="images/landing/1.mp4" type="video/mp4">
-  </video>
+      <source src="images/landing/1.mp4" type="video/mp4" id="mp4Source">
+    </video>
 
     <div class="content">
       <a href="index.html" style="text-decoration: none;"><h1 class="logo">IZSAT</h1></a>
@@ -99,6 +100,18 @@
 
       }
     }
+
+    // document.querySelector("source").onload = function() {background()};
+    function background() {
+      var player = document.getElementById('myVideo');
+      var mp4Vid = document.getElementById('mp4Source');
+      player.pause();
+      mp4Vid.src = "images/landing/2.mp4";
+      player.load();
+      player.play();
+    }
+
+
   </script>
 
 </body>
