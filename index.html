@@ -69,7 +69,6 @@
 
   <!-- Javascript -->
   <script type="text/javascript">
-
     // Get the video
     var video = document.getElementById("myVideo");
     // Pause and play the video, and change the button text
@@ -110,22 +109,16 @@
 
       player.pause();
 
-      var changing = document.querySelector("#myVideo");
-      changing.innerHTML = "<source id= \"bVideo\"></source>";
-      var backVideo = document.querySelector("#bVideo");
+      var d = new Date().getDay();
+      console.log(d);
 
-      backVideo.setAttribute("src", "images/landing/2.mp4");
-      backVideo.setAttribute("type", "video/mp4");
-      backVideo.setAttribute("id", "mp4Source");
+      // ADD THE OTHER VIDEOS HERE AFTER I GET THE CLIPS
+      if (d === 0) { // Sunday
+        mp4Vid.src = "images/landing/1.mp4";
+      } else if (d === 1) { // Monday
+        mp4Vid.src = "images/landing/2.mp4";
+      }
 
-      // var d = new Date();
-      // console.log(d);
-      // var s = document.getElementById(d.getDay());
-      // console.log(s);
-
-
-
-      // mp4Vid.src = "images/landing/2.mp4";
       player.load();
       player.play();
 
