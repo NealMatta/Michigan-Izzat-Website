@@ -34,13 +34,14 @@
     <!-- The video -->
     <video autoplay muted loop id="myVideo">
       <source src="images/landing/1.mp4" type="video/mp4" id="mp4Source">
+
     </video>
 
     <div class="content">
       <a href="index.html" style="text-decoration: none;"><h1 class="logo">IZSAT</h1></a>
       <div class="NavBarLinks">
         <ul class="nav flex-column">
-          <li class="nav-item" id="workpls">
+          <li class="nav-item">
             <a class="nav-link active" href="about.html">About</a>
           </li>
           <li class="nav-item">
@@ -68,6 +69,7 @@
 
   <!-- Javascript -->
   <script type="text/javascript">
+
     // Get the video
     var video = document.getElementById("myVideo");
     // Pause and play the video, and change the button text
@@ -105,13 +107,30 @@
     function background() {
       var player = document.getElementById('myVideo');
       var mp4Vid = document.getElementById('mp4Source');
+
       player.pause();
-      mp4Vid.src = "images/landing/2.mp4";
+
+      var changing = document.querySelector("#myVideo");
+      changing.innerHTML = "<source id= \"bVideo\"></source>";
+      var backVideo = document.querySelector("#bVideo");
+
+      backVideo.setAttribute("src", "images/landing/2.mp4");
+      backVideo.setAttribute("type", "video/mp4");
+      backVideo.setAttribute("id", "mp4Source");
+
+      // var d = new Date();
+      // console.log(d);
+      // var s = document.getElementById(d.getDay());
+      // console.log(s);
+
+
+
+      // mp4Vid.src = "images/landing/2.mp4";
       player.load();
       player.play();
+
+
     }
-
-
   </script>
 
 </body>
