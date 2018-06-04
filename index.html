@@ -73,32 +73,30 @@
     var video = document.getElementById("myVideo");
     // Pause and play the video, and change the button text
     function pause() {
-      var t1 = document.getElementById("pauseBTN");
-      var t2 = t1.querySelector("i");
       if (video.paused) {
         video.play();
-        t2.classList.add("fa-pause");
-        t2.classList.remove("fa-play");
+        $("#pauseBTN").click(function() {
+          $(this).find("i").removeClass("fas fa-play").addClass("fas fa-pause");
+        });
       } else {
         video.pause();
-        t2.classList.add("fa-play");
-        t2.classList.remove("fa-pause");
+        $("#pauseBTN").click(function() {
+          $(this).find("i").removeClass("fas fa-pause").addClass("fas fa-play");
+        });
       }
     }
 
     function mute() {
-      var t1 = document.getElementById("muteBTN");
-      var t2 = t1.querySelector("i");
       if (video.muted) {
         video.muted = false;
-        t2.classList.remove("fa-volume-up");
-        t2.classList.add("fa-volume-off");
-
+        $("#muteBTN").click(function() {
+          $(this).find("i").removeClass("fas fa-volume-up").addClass("fas fa-volume-off");
+        });
       } else {
         video.muted = true;
-        t2.classList.add("fa-volume-up");
-        t2.classList.remove("fa-volume-off");
-
+        $("#muteBTN").click(function() {
+          $(this).find("i").removeClass("fas fa-volume-off").addClass("fas fa-volume-up");
+        });
       }
     }
 
