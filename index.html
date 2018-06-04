@@ -98,27 +98,8 @@
           $(this).find("i").removeClass("fas fa-volume-off").addClass("fas fa-volume-up");
         });
       }
-    }
 
-    // document.querySelector("source").onload = function() {background()};
-    function background() {
-      var player = document.getElementById('myVideo');
-      var mp4Vid = document.getElementById('mp4Source');
-
-      player.pause();
-
-      var d = new Date().getDay();
-      console.log(d);
-
-      // ADD THE OTHER VIDEOS HERE AFTER I GET THE CLIPS
-      if (d === 0) { // Sunday
-        mp4Vid.src = "images/landing/1.mp4";
-      } else if (d === 1) { // Monday
-        mp4Vid.src = "images/landing/2.mp4";
-      }
-
-      player.load();
-      player.play();
+      
 
 
     }
