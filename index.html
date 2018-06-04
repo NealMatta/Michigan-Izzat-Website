@@ -69,6 +69,7 @@
 
   <!-- Javascript -->
   <script type="text/javascript">
+
     // Get the video
     var video = document.getElementById("myVideo");
     // Pause and play the video, and change the button text
@@ -94,12 +95,37 @@
         });
       } else {
         video.muted = true;
-        $("#muteBTN").click(function() {
-          $(this).find("i").removeClass("fas fa-volume-off").addClass("fas fa-volume-up");
-        });
-      }
+        t2.classList.add("fa-volume-up");
+        t2.classList.remove("fa-volume-off");
 
-      
+      }
+    }
+
+    // document.querySelector("source").onload = function() {background()};
+    function background() {
+      var player = document.getElementById('myVideo');
+      var mp4Vid = document.getElementById('mp4Source');
+
+      player.pause();
+
+      var changing = document.querySelector("#myVideo");
+      changing.innerHTML = "<source id= \"bVideo\"></source>";
+      var backVideo = document.querySelector("#bVideo");
+
+      backVideo.setAttribute("src", "images/landing/2.mp4");
+      backVideo.setAttribute("type", "video/mp4");
+      backVideo.setAttribute("id", "mp4Source");
+
+      // var d = new Date();
+      // console.log(d);
+      // var s = document.getElementById(d.getDay());
+      // console.log(s);
+
+
+
+      // mp4Vid.src = "images/landing/2.mp4";
+      player.load();
+      player.play();
 
 
     }
