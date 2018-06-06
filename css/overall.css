@@ -19,6 +19,10 @@ body {
   color: Gold;
 }
 
+.logoHyperlink {
+  text-decoration: none;
+}
+
 .sidenav {
   height: 100%;
   width: 0;

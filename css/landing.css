@@ -1,12 +1,3 @@
-/* Background Video of landing page */
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-
 /* Nav bar on the left hand side of landing page */
 .content {
   position: fixed;
@@ -39,9 +30,27 @@
   background: transparent;
   color: gold;
   cursor: pointer;
+  padding: 0;
 }
 
 .landingBTN:hover {
   background: #ddd;
   color: #337ab7;
+}
+
+/* Background Video of landing page */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#pauseBTN, #muteBTN {
+  padding: 5px;
+}
+
+#buttons {
+  left: 0;
 }

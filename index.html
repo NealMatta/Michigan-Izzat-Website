@@ -23,22 +23,19 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
-  </script>
 
 </head>
 
 <body onload="background()">
   <!-- NAV BAR -->
   <nav>
-
     <!-- The video -->
     <video autoplay muted loop id="myVideo">
       <source src="images/landing/1.mp4" type="video/mp4" id="mp4Source">
-
     </video>
-
+    <!-- Content -->
     <div class="content">
-      <a href="index.html" style="text-decoration: none;"><h1 class="logo">IZSAT</h1></a>
+      <a href="index.html" class="logoHyperlink"><h1 class="logo">IZSAT</h1></a>
       <div class="NavBarLinks">
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -47,9 +44,6 @@
           <li class="nav-item">
             <a class="nav-link" href="events.html">Events</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Members</a>
-          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact Us</a>
           </li>
@@ -58,9 +52,9 @@
           </li>
         </ul>
       </div>
-      <div style="left: 0;">
-        <button id="pauseBTN" class="landingBTN " onclick="pause()"><i class="fas fa-pause"></i></button>
-        <button id="muteBTN" class="landingBTN " onclick="mute()"><i class="fas fa-volume-up"></i></button>
+      <div id="buttons">
+        <button class="landingBTN" onclick="pause()"><i id="pauseBTN" class="fas fa-pause"></i></button>
+        <button class="landingBTN" onclick="mute()" ><i id="muteBTN" class="fas fa-volume-up"></i></button>
       </div>
 
     </div>
@@ -68,68 +62,7 @@
 
 
   <!-- Javascript -->
-  <script type="text/javascript">
-
-    // Get the video
-    var video = document.getElementById("myVideo");
-    // Pause and play the video, and change the button text
-    function pause() {
-      if (video.paused) {
-        video.play();
-        $("#pauseBTN").click(function() {
-          $(this).find("i").removeClass("fas fa-play").addClass("fas fa-pause");
-        });
-      } else {
-        video.pause();
-        $("#pauseBTN").click(function() {
-          $(this).find("i").removeClass("fas fa-pause").addClass("fas fa-play");
-        });
-      }
-    }
-
-    function mute() {
-      if (video.muted) {
-        video.muted = false;
-        $("#muteBTN").click(function() {
-          $(this).find("i").removeClass("fas fa-volume-up").addClass("fas fa-volume-off");
-        });
-      } else {
-        video.muted = true;
-        t2.classList.add("fa-volume-up");
-        t2.classList.remove("fa-volume-off");
-
-      }
-    }
-
-    // document.querySelector("source").onload = function() {background()};
-    function background() {
-      var player = document.getElementById('myVideo');
-      var mp4Vid = document.getElementById('mp4Source');
-
-      player.pause();
-
-      var changing = document.querySelector("#myVideo");
-      changing.innerHTML = "<source id= \"bVideo\"></source>";
-      var backVideo = document.querySelector("#bVideo");
-
-      backVideo.setAttribute("src", "images/landing/2.mp4");
-      backVideo.setAttribute("type", "video/mp4");
-      backVideo.setAttribute("id", "mp4Source");
-
-      // var d = new Date();
-      // console.log(d);
-      // var s = document.getElementById(d.getDay());
-      // console.log(s);
-
-
-
-      // mp4Vid.src = "images/landing/2.mp4";
-      player.load();
-      player.play();
-
-
-    }
-  </script>
+  <script type="text/javascript" src="js/landing.js"></script>
 
 </body>
 
