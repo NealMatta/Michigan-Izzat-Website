@@ -234,3 +234,15 @@ hr.style-two {
 .eachSectionTitle {
   font-weight: 700;
 }
+
+.open{
+  width: 20%;
+  padding: 20px;
+  overflow: visible;
+}
+
+.close{
+  width: 0%;
+  padding: 0px;
+  overflow: hidden;
+}

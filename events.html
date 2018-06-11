@@ -30,7 +30,7 @@
 <body>
   <!-- SideNav -->
   <div id="mySidenav" class="sidenav">
-    <a href="index.html" style="text-decoration: none;"><h1 class="logo">IZSAT</h1></a>
+    <a href="index.html" class="logoHyperlink"><h1 class="logo">IZSAT</h1></a>
     <div class="NavBarLinks">
       <ul class="nav flex-column">
         <li class="nav-item">
@@ -39,9 +39,6 @@
         <li class="nav-item">
           <a class="nav-link active" href="events.html">Events</a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#">Members</a>
-        </li> -->
         <li class="nav-item">
           <a class="nav-link" href="contact.html">Contact Us</a>
         </li>
@@ -66,12 +63,11 @@
     <button type="button" onclick="ppBTN(2016)">2016</button>
     <button type="button" onclick="ppBTN(2017)">2017</button>
     <button type="button" onclick="ppBTN(2018)">2018</button>
-    <!-- <button type="button" onclick="ppBTN(0)">Close</button> -->
   </div>
 
   <div class="container eachSection">
     <h1 class="eachSectionTitle">Past Performances and Awards</h1>
-    <div id="2015" class="PPAA" style="display: inherit;">
+    <div id="2015" class="PPAA" style="display: block;">
       <h2>Pearl Harbor</h2>
       <p>This theme tells the story of two best friends stationed together at Pearl Harbor. One of the friends suffers from a heart condition and is killed in the World War II attack. The story ends in a celebration of the bravery shown by members of the
         military.
@@ -124,7 +120,7 @@
   <hr class="style-two">
   <div class="container eachSection">
     <h1 class="eachSectionTitle">Mix</h1>
-    <div id="2015Mix" class="PPAA" style="display: inherit;">
+    <div id="2015Mix" class="PPAA" style="display: block;">
       <iframe width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/203347231&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
     </div>
 
@@ -176,18 +172,17 @@
   </footer>
 
   <script type="text/javascript">
+
     /* Set the width of the side navigation to 250px */
     function openNav() {
-      document.getElementById("mySidenav").style.width = "20%";
-      document.getElementById("mySidenav").style.padding = "20px";
-      document.getElementById("mySidenav").style.overflow = "visible";
+      document.getElementById("mySidenav").classList.remove("close");
+      document.getElementById("mySidenav").classList.add("open");
     }
 
     /* Set the width of the side navigation to 0 */
     function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("mySidenav").style.padding = "0";
-      document.getElementById("mySidenav").style.overflow = "hidden";
+      document.getElementById("mySidenav").classList.remove("open");
+      document.getElementById("mySidenav").classList.add("close");
     }
 
     function ppBTN(year_input) {
@@ -198,8 +193,8 @@
       for (i = 2015; i < 2019; i++) {
         var otherYears = document.getElementById(i);
         if (year === i) {
-          yearBTN.style.display = "inherit";
-          document.getElementById(year + "Mix").style.display = "inherit";
+          yearBTN.style.display = "block";
+          document.getElementById(year + "Mix").style.display = "block";
         } else {
           otherYears.style.display = "none";
           document.getElementById(i + "Mix").style.display = "none";
