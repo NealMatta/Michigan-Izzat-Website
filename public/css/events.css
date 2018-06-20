@@ -1,0 +1,48 @@
+body{
+  font-weight: 400;
+}
+
+.yearsBTN {
+  margin: 3% 0;
+  text-align: center;
+}
+
+.yearsBTN button {
+  border: solid 3px gold;
+  font-size: 25px;
+  border-radius: 10%;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+}
+
+.yearsBTN button:hover {
+  background-color: #1f1f1f;
+  color: gold;
+}
+
+.PPAA h2{
+  text-align: center;
+  font-size: 25px;
+}
+
+.PPAA p{
+  font-size: 14px;
+}
+
+.PPAA iframe{
+  padding-bottom: 30px;
+}
+
+.CompAwards{
+  text-align: center;
+}
+
+.CompAwards a{
+  text-decoration: none;
+  color: gold;
+  transition: 0.3s ease-in-out;
+}
+
+.CompAwards a:hover{
+  color: #1f1f1f;
+}

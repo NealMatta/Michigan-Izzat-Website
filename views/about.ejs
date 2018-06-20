@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Izzat | About Us</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
+  <!-- Font Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Jura:600,700" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  </script>
+
+</head>
+
+<body>
+  <!-- Sidenav Bar -->
+  <% include partials/sidenav %>
+
+    <!-- Background -->
+    <div class="" style="background: black;">
+      <img src="/images/Group/about.png" alt="Group Photo" class="pageBackgroundIMG">
+    </div>
+
+    <section style=" background: white;">
+      <div class="container eachSection">
+        <h1 class="eachSectionTitle">Who are we?</h1>
+        <p>
+          Michigan Izzat, founded in January of 2013, is the University of Michigan's premier all-male fusion dance team. As a nationally ranked collegiate team, we strive to promote dance and culture while staying true to our identity and university. Both on and
+          off the stage, we affirm this mission through community service and performances for our campus community as well as the greater community across the nation. Using high energy choreography, innovative stunts, and our passion for dance, we come
+          together fusing the styles of hip hop, bhangra and bollywood to produce a performance intended to inspire, to allure, and to celebrate Indian and American culture.
+        </p>
+      </div>
+
+      <hr class="style-two">
+      <!-- Members -->
+      <div class="container eachSection">
+        <h1 class="eachSectionTitle">The Boahz</h1>
+        <p id="note"><i>Click on the buttons to see all the members</i></p>
+        <div class="ActiveAlumBTN">
+          <button type="button" onclick="togActiveAlum('Active')">Active</button>
+          <button type="button" onclick="togActiveAlum('Alumni')">Alumni</button>
+        </div>
+
+        <div class="row">
+          <div id="Active" style="display:none;">
+            <div class="col-lg-3 col-md-3 col-sm-4 memberPics">
+              <img src="images/profile/temp.png" alt="Temp">
+              <h3>Siddhu Dandamudi</h3>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-4 memberPics">
+              <img src="images/profile/temp.png" alt="Temp">
+              <h3>FirstName Lastname</h3>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-4 memberPics">
+              <img src="images/profile/temp.png" alt="Temp">
+              <h3>FirstName Lastname</h3>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-4 memberPics">
+              <img src="images/profile/temp.png" alt="Temp">
+              <h3>FirstName Lastname</h3>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-4 memberPics">
+              <img src="images/profile/temp.png" alt="Temp">
+              <h3>FirstName Lastname</h3>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 memberPics">
+              <img src="images/profile/temp.png" alt="Temp">
+              <h3>FirstName Lastname</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="Alumni" style="display: none">
+            <div class="col-lg-2 col-md-2 col-sm-3 memberPics">
+              <img src="images/profile/temp.png" alt="Temp">
+              <h4>FirstName Lastname</h4>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-3 memberPics">
+              <img src="images/profile/temp.png" alt="Temp">
+              <h4>FirstName Lastname</h4>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-3 memberPics">
+              <img src="images/profile/temp.png" alt="Temp">
+              <h4>FirstName Lastname</h4>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-3 memberPics">
+              <img src="images/profile/temp.png" alt="Temp">
+              <h4>FirstName Lastname</h4>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-3 memberPics">
+              <img src="images/profile/temp.png" alt="Temp">
+              <h4>FirstName Lastname</h4>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-3 memberPics">
+              <img src="images/profile/temp.png" alt="Temp">
+              <h4>FirstName Lastname</h4>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-3 memberPics">
+              <img src="images/profile/temp.png" alt="Temp">
+              <h4>FirstName Lastname</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <% include partials/footer %>
+
+      <script type="text/javascript">
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+          document.getElementById("mySidenav").classList.remove("close");
+          document.getElementById("mySidenav").classList.add("open");
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+          document.getElementById("mySidenav").classList.remove("open");
+          document.getElementById("mySidenav").classList.add("close");
+        }
+
+        function togAlum() {
+          var nav = document.getElementById("Alumni");
+          if (nav.style.display === 'inherit') {
+            nav.style.display = 'none';
+            document.getElementById("hrDivider").style.display = 'none';
+          } else {
+            nav.style.display = 'inherit';
+            if (document.getElementById("Active").style.display === 'inherit') {
+              document.getElementById("hrDivider").style.display = 'inherit';
+            }
+          }
+        }
+
+        function togActive() {
+          var nav = document.getElementById("Active");
+          if (nav.style.display === 'inherit') {
+            nav.style.display = 'none';
+            document.getElementById("hrDivider").style.display = 'none';
+          } else {
+            nav.style.display = 'inherit';
+            if (document.getElementById("Alumni").style.display === 'inherit') {
+              document.getElementById("hrDivider").style.display = 'inherit';
+            }
+          }
+        }
+
+        function togActiveAlum(ActiveOrAlum) {
+          var members = ActiveOrAlum;
+
+          if (members === "Active") {
+            document.getElementById("Active").style.display = "inherit"
+            document.getElementById("Alumni").style.display = "none"
+          } else {
+            document.getElementById("Active").style.display = "none"
+            document.getElementById("Alumni").style.display = "inherit"
+          }
+
+        }
+      </script>
+
+
+</body>
+
+</html>
