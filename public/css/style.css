@@ -288,3 +288,59 @@ hr.divider {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+/* ========================================
+                Contact page
+======================================== */
+
+body {
+  font-family: 'Jura', sans-serif;
+  font-weight: 400;
+}
+p{
+  text-align: center;
+  margin-bottom: 30px;
+}
+input, textarea {
+  padding: 5px;
+  border: 1px solid #1f1f1f;
+  border-radius: 5px;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 30px;
+  outline: none;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  outline: none;
+  box-sizing: border-box;
+  resize: none;
+}
+
+input:focus {
+  border: 1px solid gold;
+}
+
+textarea:focus {
+  border: 1px solid gold;
+}
+
+#submitBTN{
+  text-align: center;
+}
+
+#submitBTN input{
+  width: auto;
+  background: white;
+  border: solid 3px gold;
+  transition: 0.3s ease-in-out;
+}
+
+#submitBTN input:hover{
+  background: #1f1f1f;
+  color: gold;
+}

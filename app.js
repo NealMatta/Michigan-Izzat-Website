@@ -15,7 +15,7 @@ app.get("/about", function(req, res) {
 });
 
 app.get("/contact", function(req, res) {
-    res.send("contact us page");
+    res.render("contact");
 });
 
 app.get("/donate", function(req, res) {
@@ -25,8 +25,6 @@ app.get("/donate", function(req, res) {
 app.get("/events", function(req, res) {
     res.send("events page");
 });
-
-
 
 // Failsafe to catch all broken Links
   // Must be last call
