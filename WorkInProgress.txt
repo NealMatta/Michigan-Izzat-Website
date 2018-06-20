@@ -27,3 +27,8 @@
 - Small Q&A
   - Interested in sponsoring?
     - Refer to contact sections
+
+
+=============== EXPRESS ===============
+~~~ Overall ~~~
+- Need to delete all the html files in the overall folder, CSS, and images folders as well 
