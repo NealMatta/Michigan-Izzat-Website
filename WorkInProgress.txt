@@ -1,3 +1,22 @@
+=============== EXPRESS ===============
+~~~ Overall ~~~
+- Create login page which would allow admin to access forms to update database
+  for members and eventually update database for events page
+
+~~~ Landing Page ~~~
+
+~~~ Events ~~~
+- Put all that information into a database
+
+~~~ About us Page ~~~
+- Use MongoDB to store information
+
+~~~ Contact Us ~~~
+
+~~~ Donate ~~~
+
+=============== General ===============
+
 ~~~ Overall ~~~
 - Need to make the website mobile responsive
 - Favicon
@@ -5,18 +24,14 @@
 - Tryouts page
 
 ~~~ Landing Page ~~~
-- Change pause to play when paused and play to pause when played
-  - Need to fix javascript and Jquery
-- Higher Quality background video
 - Have 7 different videos for different days
 
+~~~ Events ~~~
+
 ~~~ About us Page ~~~
-- Somehow credit the photographer
 - Add Captains, chairs, etc.
 - Use MongoDB to store information
 - Make the transitions smoother for opening Alumni and Current members
-
-~~~ Events ~~~
 
 ~~~ Contact Us ~~~
 - Set up form to automatically send an email

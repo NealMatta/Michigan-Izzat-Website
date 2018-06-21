@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Michigan Izzat</title>
+
+  <% include partials/header %>
+
+</head>
+
+<body onload="background()">
+  <!-- Nav -->
+  <nav>
+    <!-- Video -->
+    <video autoplay muted loop id="myVideo">
+      <source src="images/landing/1.mp4" type="video/mp4" id="mp4Source">
+    </video>
+    <!-- Content -->
+    <div class="content">
+      <a href="/" class="logoHyperlink"><h1 class="logo">IZSAT</h1></a>
+      <div class="NavBarLinks">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/events">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/donate">Donate</a>
+          </li>
+        </ul>
+      </div>
+      <div id="buttons">
+        <button class="landingBTN" onclick="pause()"><i id="pauseBTN" class="fas fa-pause"></i></button>
+        <button class="landingBTN" onclick="mute()" ><i id="muteBTN" class="fas fa-volume-up"></i></button>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- Javascript -->
+  <script type="text/javascript" src="js/landing.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Izzat | Contact</title>
+
+  <% include partials/header %>
+
+</head>
+
+<body>
+  <!-- Sidenav Bar -->
+  <% include partials/sidenav %>
+
+    <!-- Background -->
+    <div class="" style="background: black;">
+      <img src="images/Group/contact.png" alt="Group Photo" class="pageBackgroundIMG">
+    </div>
+
+    <div class="container eachSection contact">
+      <h1>Give us a shout</h1>
+      <p>If you would like to hire Michigan Izzat to perform at your next event, email us at michiganizzat@gmail.com or fill out the form.</p>
+      <div class="ContactForm">
+        <form name="contactform" method="post" action="php/send_form_email.php">
+          <input type="text" name="first_name" placeholder="First Name">
+          <input type="text" name="last_name" placeholder="Last Name">
+          <input type="text" name="email" placeholder="Email Address">
+          <textarea name="comments"  placeholder="What can we help you with?"></textarea>
+          <div id="submitBTN">
+            <input  type="submit" value="Submit" placeholder="Submit">
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <% include partials/footer %>
+
+    <script type="text/javascript">
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").classList.remove("close");
+        document.getElementById("mySidenav").classList.add("open");
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").classList.remove("open");
+        document.getElementById("mySidenav").classList.add("close");
+      }
+    </script>
+
+</body>
+
+</html>

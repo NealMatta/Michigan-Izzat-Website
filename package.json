@@ -1,0 +1,24 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NealMatta/Michigan-Izzat-Website.git"
+  },
+  "author": "Neal Matta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NealMatta/Michigan-Izzat-Website/issues"
+  },
+  "homepage": "https://github.com/NealMatta/Michigan-Izzat-Website#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  }
+}
