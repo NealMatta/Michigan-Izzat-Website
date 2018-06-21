@@ -1,1 +1,69 @@
-<h1>Hello is this working now?</h1>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Michigan Izzat</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
+  <!-- Javascript -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- Font Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Jura:400,600,700" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  </script>
+
+</head>
+
+<body onload="background()">
+  <!-- NAV BAR -->
+  <nav>
+    <!-- The video -->
+    <video autoplay muted loop id="myVideo">
+      <source src="images/landing/1.mp4" type="video/mp4" id="mp4Source">
+    </video>
+    <!-- Content -->
+    <div class="content">
+      <a href="/" class="logoHyperlink"><h1 class="logo">IZSAT</h1></a>
+      <div class="NavBarLinks">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/events">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/donate">Donate</a>
+          </li>
+        </ul>
+      </div>
+      <div id="buttons">
+        <button class="landingBTN" onclick="pause()"><i id="pauseBTN" class="fas fa-pause"></i></button>
+        <button class="landingBTN" onclick="mute()" ><i id="muteBTN" class="fas fa-volume-up"></i></button>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- Javascript -->
+  <script type="text/javascript" src="js/landing.js"></script>
+
+</body>
+
+</html>

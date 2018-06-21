@@ -19,11 +19,11 @@ app.get("/contact", function(req, res) {
 });
 
 app.get("/donate", function(req, res) {
-    res.send("donate page");
+    res.render("donate");
 });
 
 app.get("/events", function(req, res) {
-    res.send("events page");
+    res.render("events");
 });
 
 // Failsafe to catch all broken Links

@@ -21,7 +21,7 @@ body {
   color: Gold;
 }
 
-.logoHyperlink {
+.logoHyperlink:hover {
   text-decoration: none;
 }
 
@@ -233,6 +233,66 @@ hr.style-two {
   overflow: hidden;
 }
 
+/* ========================================
+                Landing page
+======================================== */
+
+/* Nav bar on the left hand side of landing page */
+.content {
+  position: fixed;
+  left: 0;
+  top: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  /* background: red; */
+  color: #f1f1f1;
+  width: 20%;
+  padding: 20px;
+  height: 100%;
+}
+
+/* Editing all of the nav bar directory pages  */
+
+.NavBarLinks ul>li>a {
+  /* background: yellow; */
+  font-size: 1.7vw;
+  text-align: left;
+  font-family: 'Jura', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Pause and Play Buttons */
+.landingBTN {
+  font-size: 1.5em;
+  border: none;
+  background: transparent;
+  color: gold;
+  cursor: pointer;
+  padding: 0;
+}
+
+.landingBTN:hover {
+  background: #ddd;
+  color: #337ab7;
+}
+
+/* Background Video of landing page */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#pauseBTN, #muteBTN {
+  padding: 5px;
+}
+
+#buttons {
+  left: 0;
+}
 
 /* ========================================
                 About page
@@ -297,7 +357,8 @@ body {
   font-family: 'Jura', sans-serif;
   font-weight: 400;
 }
-p{
+
+.contact p{
   text-align: center;
   margin-bottom: 30px;
 }
@@ -343,4 +404,69 @@ textarea:focus {
 #submitBTN input:hover{
   background: #1f1f1f;
   color: gold;
+}
+
+/* ========================================
+                Donate page
+======================================== */
+
+.QA{
+  padding-bottom: 5px;
+}
+
+.QA h2{
+  font-weight: 600;
+}
+
+/* ========================================
+                Events page
+======================================== */
+
+body{
+  font-weight: 400;
+}
+
+.yearsBTN {
+  margin: 3% 0;
+  text-align: center;
+}
+
+.yearsBTN button {
+  border: solid 3px gold;
+  font-size: 25px;
+  border-radius: 10%;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+}
+
+.yearsBTN button:hover {
+  background-color: #1f1f1f;
+  color: gold;
+}
+
+.PPAA h2{
+  text-align: center;
+  font-size: 25px;
+}
+
+.PPAA p{
+  font-size: 14px;
+}
+
+.PPAA iframe{
+  padding-bottom: 30px;
+}
+
+.CompAwards{
+  text-align: center;
+}
+
+.CompAwards a{
+  text-decoration: none;
+  color: gold;
+  transition: 0.3s ease-in-out;
+}
+
+.CompAwards a:hover{
+  color: #1f1f1f;
 }
