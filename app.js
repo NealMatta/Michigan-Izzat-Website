@@ -15,8 +15,8 @@ var memberSchema = mongoose.Schema({
   name: String,
   image: String,
   year: String,
-  hasPosition: Boolean,
-  position: String
+  // hasPosition: Boolean,
+  // position: String
 });
 
 var Member = mongoose.model("Member", memberSchema);
