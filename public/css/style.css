@@ -470,3 +470,30 @@ body{
 .CompAwards a:hover{
   color: #1f1f1f;
 }
+
+/* ========================================
+                Other
+======================================== */
+
+.form-overview a{
+  /* font-size: 20px;
+  text-decoration: none;
+  border: solid 1px black;
+  border-radius: 5px;
+  padding: 10px;
+  transition: 0.1s ease-in-out;
+  margin: 5px;
+  background-color: #f7f7f7;
+  color: black; */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+
+}
+
+.form-overview a:hover{
+  background-color: white;
+  /* box-shadow: 0 4px 8px 0 rgba(255, 215, 0, 0.2), 0 6px 20px 0 rgba(255, 215, 0, 0.19); */
+}
+
+.form-overview h1{
+  text-align: center;
+}

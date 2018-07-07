@@ -1,13 +1,16 @@
-var express = require("express"),
-  app = express(),
-  path = require('path'),
-  mongoose = require('mongoose');
+var express   = require("express"),
+  app         = express(),
+  bodyParser  = require("body-parser"),
+  path        = require('path'),
+  mongoose    = require('mongoose');
 
 // Connecting to the Database
 mongoose.connect("mongodb://localhost/izzat");
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.urlencoded({extended: true})); // Body parser used to get code from POST request
+
 
 // Creating the schema for each member
 var memberSchema = mongoose.Schema({
@@ -53,9 +56,27 @@ app.get("/about", function(req, res) {
   })
 });
 
+// Section Overlay to add new items
+app.get("/updatingOverview", function(req,res) {
+  res.render("addingItems");
+});
+
 // New form for members
-app.get("/about/new", function(req,res) {
+app.get("/updatingOverview/newMember", function(req,res) {
   res.render("addMember");
+});
+
+app.post("/updatingOverview/newMember", function(req, res){
+  // console.log(req.body.member);
+  // res.redirect("/updatingOverview")
+  Member.create(req.body.member, function(err, newMem){
+    if(err){
+      res.render("addMember");
+    } else {
+      console.log(req.body.member);
+      res.redirect("/updatingOverview");
+    }
+  });
 });
 
 app.get("/contact", function(req, res) {

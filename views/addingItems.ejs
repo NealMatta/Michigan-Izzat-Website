@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Add Member</title>
+
+  <% include partials/header %>
+
+</head>
+
+<body>
+  <!-- Sidenav Bar -->
+  <% include partials/sidenav %>
+
+    <!-- Background -->
+    <div class="" style="background: black;">
+      <img src="/images/Group/about.png" alt="Group Photo" class="pageBackgroundIMG">
+    </div>
+
+    <div class="container" style="margin-bottom: 50px;">
+      <div class="row">
+        <h1 style="text-align: center">Welcome to the logged in section</h1>
+
+        <div class="col-lg-4 ">
+          <h2>Members</h2>
+          <ul>
+            <li>
+              <div class="form-overview">
+                <a href="/updatingOverview/newMember">Add New</a>
+              </div>
+            </li>
+            <li>
+              <div class="form-overview">
+                <a href="/updatingOverview/newMember">Update</a>
+              </div>
+            </li>
+            <li>
+              <div class="form-overview">
+                <a href="/updatingOverview/newMember">Delete</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <% include partials/footer %>
+
+      <script type="text/javascript">
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+          document.getElementById("mySidenav").classList.remove("close");
+          document.getElementById("mySidenav").classList.add("open");
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+          document.getElementById("mySidenav").classList.remove("open");
+          document.getElementById("mySidenav").classList.add("close");
+        }
+
+      </script>
+
+
+</body>
+
+</html>
