@@ -45,6 +45,9 @@
                 <div class="col-lg-3 col-md-3 col-sm-4 memberPics">
                   <img src="images/profile/temp.png" alt="Temp">
                   <h3><%= member["name"] %></h3>
+                  <% if (member["hasPosition"]){ %>
+                    <h5><%= member["position"] %></h5>
+                  <% }; %>
                 </div>
               <% }; %>
             <% }); %>

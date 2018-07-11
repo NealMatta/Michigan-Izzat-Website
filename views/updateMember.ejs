@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Add Member</title>
+  <title>Update Member</title>
 
   <% include partials/header %>
 
@@ -20,9 +20,11 @@
 
     <div class="container">
       <div class="row">
-        <h1 style="text-align: center">Add a new member</h1>
+        <h1 style="text-align: center">Update an existing member</h1>
+        
+
         <div style="width: 60%; margin: 30px auto; text-align: center;">
-          <form action="/updatingOverview/Member/New" method="POST">
+          <form action="/updatingOverview/newMember" method="POST">
             <span>Alumni or Current</span>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="member[current]" value="true">
