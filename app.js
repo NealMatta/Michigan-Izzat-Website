@@ -78,10 +78,11 @@ app.get("/updatingOverview/Member/Change", function(req, res) {
 });
 
 app.get("/updatingOverview/Member/Update/:id", function(req, res){
-
+  res.send("Update")
 });
 
 app.get("/updatingOverview/Member/Delete/:id", function(req, res){
+  res.send("Delete")
 
 });
 

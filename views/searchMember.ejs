@@ -9,6 +9,7 @@
 
 </head>
 
+
 <body>
   <!-- Sidenav Bar -->
   <% include partials/sidenav %>
@@ -27,8 +28,8 @@
             <ul>
               <% if (member["current"]){ %>
                   <li> <%= member["name"] %> </li>
-                  <button>Update</button>
-                  <button>Delete</button>
+                  <p><a href="/updatingOverview/Member/Update/<%= member._id %>" class="btn btn-primary">Update</a></p>
+                  <p><a href="/updatingOverview/Member/Delete/<%= member._id %>" class="btn btn-primary">Delete</a></p>
               <% }; %>
             </ul>
             <% }); %>
@@ -40,8 +41,9 @@
             <ul>
               <% if (!member["current"]){ %>
                   <li> <%= member["name"] %> </li>
-                  <button>Update</button>
-                  <button>Delete</button>
+                  <p><a href="/updatingOverview/Member/Update/<%= member._id %>" class="btn btn-primary">Update</a></p>
+                  <p><a href="/updatingOverview/Member/Delete/<%= member._id %>" class="btn btn-primary">Delete</a></p>
+
               <% }; %>
             </ul>
             <% }); %>
