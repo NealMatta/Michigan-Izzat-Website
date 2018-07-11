@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Update Member</title>
+
+  <% include partials/header %>
+
+</head>
+
+<body>
+  <!-- Sidenav Bar -->
+  <% include partials/sidenav %>
+
+    <!-- Background -->
+    <div class="" style="background: black;">
+      <img src="/images/Group/about.png" alt="Group Photo" class="pageBackgroundIMG">
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <h1 style="text-align: center">Click on a member to update their info</h1>
+          <div class="col-lg-6">
+            <h2>Current Members</h2>
+            <% members.forEach(function(member){ %>
+            <ul>
+              <% if (member["current"]){ %>
+                  <li> <%= member["name"] %> </li>
+                  <button>Update</button>
+                  <button>Delete</button>
+              <% }; %>
+            </ul>
+            <% }); %>
+          </div>
+
+          <div class="col-lg-6">
+            <h2>Alumni</h2>
+            <% members.forEach(function(member){ %>
+            <ul>
+              <% if (!member["current"]){ %>
+                  <li> <%= member["name"] %> </li>
+                  <button>Update</button>
+                  <button>Delete</button>
+              <% }; %>
+            </ul>
+            <% }); %>
+          </div>
+      </div>
+    </div>
+
+
+    <% include partials/footer %>
+
+      <script type="text/javascript">
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+          document.getElementById("mySidenav").classList.remove("close");
+          document.getElementById("mySidenav").classList.add("open");
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+          document.getElementById("mySidenav").classList.remove("open");
+          document.getElementById("mySidenav").classList.add("close");
+        }
+
+
+      </script>
+
+
+</body>
+
+</html>

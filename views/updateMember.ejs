@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Izzat | About Us</title>
+  <title>Update Member</title>
 
   <% include partials/header %>
 
@@ -18,58 +18,59 @@
       <img src="/images/Group/about.png" alt="Group Photo" class="pageBackgroundIMG">
     </div>
 
-    <section style=" background: white;">
-      <div class="container eachSection">
-        <h1 class="eachSectionTitle">Who are we?</h1>
-        <p>
-          Michigan Izzat, founded in January of 2013, is the University of Michigan's premier all-male fusion dance team. As a nationally ranked collegiate team, we strive to promote dance and culture while staying true to our identity and university. Both on and
-          off the stage, we affirm this mission through community service and performances for our campus community as well as the greater community across the nation. Using high energy choreography, innovative stunts, and our passion for dance, we come
-          together fusing the styles of hip hop, bhangra and bollywood to produce a performance intended to inspire, to allure, and to celebrate Indian and American culture.
-        </p>
+    <div class="container">
+      <div class="row">
+        <h1 style="text-align: center">Update an existing member</h1>
+        
+
+        <div style="width: 60%; margin: 30px auto; text-align: center;">
+          <form action="/updatingOverview/newMember" method="POST">
+            <span>Alumni or Current</span>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="member[current]" value="true">
+              <label class="form-check-label">Current</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="member[current]" value="false">
+              <label class="form-check-label">Alumni</label>
+            </div>
+            <br>
+
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Full Name" name="member[name]">
+            </div>
+
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Image URL" name="member[image]">
+            </div>
+
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Year of graduation" name="member[year]">
+            </div>
+
+
+            <span>Does the member have a position?</span>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="member[hasPosition]" value="true">
+              <label class="form-check-label">True</label>
+            </div>
+            <span>If true, what position?</span>
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Position" name="member[position]">
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="member[hasPosition]" value="false">
+              <label class="form-check-label">False</label>
+            </div>
+
+            <div class="form-group">
+              <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+            </div>
+            <a href="/updatingOverview">Go Back to the editing page</a>
+          </form>
+        </div>
       </div>
-
-      <hr class="style-two">
-      <!-- Members -->
-      <div class="container eachSection">
-        <h1 class="eachSectionTitle">The Boahz</h1>
-        <p id="note"><i>Click on the buttons to see all the members</i></p>
-        <div class="ActiveAlumBTN">
-          <button type="button" onclick="togActiveAlum('Active')">Active</button>
-          <button type="button" onclick="togActiveAlum('Alumni')">Alumni</button>
-        </div>
-
-        <div class="row">
-          <div id="Active" style="display:none;">
-            <% members.forEach(function(member){ %>
-              <% if (member["current"]){ %>
-                <div class="col-lg-3 col-md-3 col-sm-4 memberPics">
-                  <img src="images/profile/temp.png" alt="Temp">
-                  <h3><%= member["name"] %></h3>
-                  <% if (member["hasPosition"]){ %>
-                    <h5><%= member["position"] %></h5>
-                  <% }; %>
-                </div>
-              <% }; %>
-            <% }); %>
-          </div>
-        </div>
-
-        <div class="row">
-          <div id="Alumni" style="display: none">
-            <% members.forEach(function(member){ %>
-              <% if (!(member["current"])){ %>
-                <div class="col-lg-2 col-md-2 col-sm-3 memberPics">
-                  <img src="images/profile/temp.png" alt="Temp">
-                  <h3><%= member["name"] %></h3>
-                </div>
-              <% }; %>
-            <% }); %>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
+    </div>
 
     <% include partials/footer %>
 
