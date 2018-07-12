@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Update Member</title>
+
+  <% include ../../partials/header %>
+
+</head>
+
+<body>
+  <!-- Sidenav Bar -->
+  <% include ../../partials/sidenav %>
+
+    <!-- Background -->
+    <div class="" style="background: black;">
+      <img src="/images/Group/about.png" alt="Group Photo" class="pageBackgroundIMG">
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <h1 style="text-align: center">Update Member: <%= individualMember["name"] %> </h1>
+        <div style="width: 60%; margin: 30px auto; text-align: center;">
+          <form action="/maintenance/Member/Update/<%= individualMember["_id"] %>?_method=PUT" method="POST">
+            <span>Alumni or Current</span>
+
+            <% if (individualMember["current"]){ %>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="member[current]" value="true" checked>
+                <label class="form-check-label">Current</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="member[current]" value="false">
+                <label class="form-check-label">Alumni</label>
+              </div>
+              <br>
+            <% } else {  %>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="member[current]" value="true" >
+                <label class="form-check-label">Current</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="member[current]" value="false" checked>
+                <label class="form-check-label">Alumni</label>
+              </div>
+              <br>
+            <% }; %>
+
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Full Name" name="member[name]" value="<%= individualMember["name"] %>">
+            </div>
+
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Image URL" name="member[image]" value="<%= individualMember["image"] %>">
+            </div>
+
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Year of graduation" name="member[year]" value="<%= individualMember["year"] %>">
+            </div>
+
+            <% if (individualMember["hasPosition"]){ %>
+              <span>Does the member have a position?</span>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="member[hasPosition]" value="true" checked>
+                <label class="form-check-label">True</label>
+              </div>
+              <span>If true, what position?</span>
+              <div class="form-group">
+                <input class="form-control" type="text" placeholder="Position" name="member[position]" value="<%= individualMember["position"] %>">
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="member[hasPosition]" value="false">
+                <label class="form-check-label">False</label>
+              </div>
+            <% } else {  %>
+              <span>Does the member have a position?</span>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="member[hasPosition]" value="true">
+                <label class="form-check-label">True</label>
+              </div>
+              <span>If true, what position?</span>
+              <div class="form-group">
+                <input class="form-control" type="text" placeholder="Position" name="member[position]" value="">
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="member[hasPosition]" value="false" checked>
+                <label class="form-check-label">False</label>
+              </div>
+            <% }; %>
+
+
+              <div class="form-group">
+                <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+              </div>
+            <a href="/maintenance/Member/Edit">Go Back to the all members page</a>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <% include ../../partials/footer %>
+
+      <script type="text/javascript">
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+          document.getElementById("mySidenav").classList.remove("close");
+          document.getElementById("mySidenav").classList.add("open");
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+          document.getElementById("mySidenav").classList.remove("open");
+          document.getElementById("mySidenav").classList.add("close");
+        }
+
+      </script>
+
+
+</body>
+
+</html>

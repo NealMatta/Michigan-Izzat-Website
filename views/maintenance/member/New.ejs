@@ -3,15 +3,15 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Update Member</title>
+  <title>Add Member</title>
 
-  <% include partials/header %>
+  <% include ../../partials/header %>
 
 </head>
 
 <body>
   <!-- Sidenav Bar -->
-  <% include partials/sidenav %>
+  <% include ../../partials/sidenav %>
 
     <!-- Background -->
     <div class="" style="background: black;">
@@ -20,11 +20,9 @@
 
     <div class="container">
       <div class="row">
-        <h1 style="text-align: center">Update an existing member</h1>
-        
-
+        <h1 style="text-align: center">Add a new member</h1>
         <div style="width: 60%; margin: 30px auto; text-align: center;">
-          <form action="/updatingOverview/newMember" method="POST">
+          <form action="/maintenance/Member/New" method="POST">
             <span>Alumni or Current</span>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="member[current]" value="true">
@@ -66,13 +64,13 @@
             <div class="form-group">
               <button class="btn btn-lg btn-primary btn-block">Submit!</button>
             </div>
-            <a href="/updatingOverview">Go Back to the editing page</a>
+            <a href="/maintenance">Go Back to the editing page</a>
           </form>
         </div>
       </div>
     </div>
 
-    <% include partials/footer %>
+    <% include ../../partials/footer %>
 
       <script type="text/javascript">
         /* Set the width of the side navigation to 250px */
