@@ -29,11 +29,16 @@
               <% if (member["current"]){ %>
                   <li> <%= member["name"] %> </li>
                   <p><a href="/maintenance/Member/Update/<%= member._id %>" class="btn btn-primary">Update</a></p>
-                  <p><a href="/maintenance/Member/Delete/<%= member._id %>" class="btn btn-primary">Delete</a></p>
+                  <form  method="POST" action="/maintenance/Member/Delete/<%= member._id %>?_method=DELETE">
+                        <button class="ui red basic button" type="submit">Delete</button>
+                  </form>
+                  <!-- <p><a href="" class="btn btn-primary">Delete</a></p> -->
               <% }; %>
             </ul>
             <% }); %>
           </div>
+
+
 
           <div class="col-lg-6">
             <h2>Alumni</h2>
@@ -42,7 +47,9 @@
               <% if (!member["current"]){ %>
                   <li> <%= member["name"] %> </li>
                   <p><a href="/maintenance/Member/Update/<%= member._id %>" class="btn btn-primary">Update</a></p>
-                  <p><a href="/maintenance/Member/Delete/<%= member._id %>" class="btn btn-primary">Delete</a></p>
+                  <form  method="POST" action="/maintenance/Member/Delete/<%= member._id %>?_method=DELETE">
+                        <button class="ui red basic button" type="submit">Delete</button>
+                  </form>
               <% }; %>
             </ul>
             <% }); %>

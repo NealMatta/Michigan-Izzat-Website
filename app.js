@@ -103,6 +103,7 @@ app.get("/maintenance/Member/Update/:id", function(req, res){
   });
 });
 
+// Updating members in database
 app.put("/maintenance/Member/Update/:id", function(req, res){
   console.log("Put Request processed");
   Member.findByIdAndUpdate(req.params.id, req.body.member, function(err, individualMember){
@@ -114,15 +115,18 @@ app.put("/maintenance/Member/Update/:id", function(req, res){
       res.redirect(showUrl);
     }
   });
-
 });
 
-app.get("/maintenance/Member/Delete/:id", function(req, res){
-  res.send("Delete")
-
+app.delete("/maintenance/Member/Delete/:id", function(req, res){
+  Member.findById(req.params.id, function(err, member){
+    if (err) {
+      console.log(err);
+    } else {
+      member.remove();
+      res.redirect("/maintenance/Member/Edit");
+    }
+  });
 });
-
-
 
 
 // Failsafe to catch all broken Links
