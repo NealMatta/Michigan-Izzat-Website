@@ -21,50 +21,58 @@
     <div class="container">
       <div class="row">
         <h1 style="text-align: center">Add a new member</h1>
-        <div style="width: 60%; margin: 30px auto; text-align: center;">
+        <div id="form-layout">
           <form action="/maintenance/Member/New" method="POST">
-            <span>Alumni or Current</span>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="member[current]" value="true">
-              <label class="form-check-label">Current</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="member[current]" value="false">
-              <label class="form-check-label">Alumni</label>
-            </div>
-            <br>
 
             <div class="form-group">
+              <label>Name:</label>
               <input class="form-control" type="text" placeholder="Full Name" name="member[name]">
             </div>
 
             <div class="form-group">
+              <label>Image Link:</label>
               <input class="form-control" type="text" placeholder="Image URL" name="member[image]">
             </div>
 
             <div class="form-group">
-              <input class="form-control" type="text" placeholder="Year of graduation" name="member[year]">
+              <label>Year of Graduation (Just the number):</label>
+              <input class="form-control" type="text" placeholder="Year" name="member[year]">
             </div>
 
+            <label>What's their member status?</label>
+            <div id="radio-choice">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="member[current]" value="true">
+                <label class="form-check-label">Current</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="member[current]" value="false">
+                <label class="form-check-label">Alumni</label>
+              </div>
+            </div>
 
-            <span>Does the member have a position?</span>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="member[hasPosition]" value="true">
-              <label class="form-check-label">True</label>
-            </div>
-            <span>If true, what position?</span>
-            <div class="form-group">
-              <input class="form-control" type="text" placeholder="Position" name="member[position]">
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="member[hasPosition]" value="false">
-              <label class="form-check-label">False</label>
+            <label>Does the member have a position?</label>
+            <div id="radio-choice">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="member[hasPosition]" value="true">
+                <label class="form-check-label">True</label>
+              </div>
+              <span>If true, what position?</span>
+              <div class="form-group">
+                <input class="form-control" type="text" placeholder="Position" name="member[position]">
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="member[hasPosition]" value="false">
+                <label class="form-check-label">False</label>
+              </div>
             </div>
 
             <div class="form-group">
               <button class="btn btn-lg btn-primary btn-block">Submit!</button>
             </div>
-            <a href="/maintenance">Go Back to the editing page</a>
+
+            <p style="text-align: center;"><a href="/maintenance" class="btn btn-outline-warning" >Go Back to the editing page</a></p>
+
           </form>
         </div>
       </div>
@@ -83,45 +91,6 @@
         function closeNav() {
           document.getElementById("mySidenav").classList.remove("open");
           document.getElementById("mySidenav").classList.add("close");
-        }
-
-        function togAlum() {
-          var nav = document.getElementById("Alumni");
-          if (nav.style.display === 'inherit') {
-            nav.style.display = 'none';
-            document.getElementById("hrDivider").style.display = 'none';
-          } else {
-            nav.style.display = 'inherit';
-            if (document.getElementById("Active").style.display === 'inherit') {
-              document.getElementById("hrDivider").style.display = 'inherit';
-            }
-          }
-        }
-
-        function togActive() {
-          var nav = document.getElementById("Active");
-          if (nav.style.display === 'inherit') {
-            nav.style.display = 'none';
-            document.getElementById("hrDivider").style.display = 'none';
-          } else {
-            nav.style.display = 'inherit';
-            if (document.getElementById("Alumni").style.display === 'inherit') {
-              document.getElementById("hrDivider").style.display = 'inherit';
-            }
-          }
-        }
-
-        function togActiveAlum(ActiveOrAlum) {
-          var members = ActiveOrAlum;
-
-          if (members === "Active") {
-            document.getElementById("Active").style.display = "inherit"
-            document.getElementById("Alumni").style.display = "none"
-          } else {
-            document.getElementById("Active").style.display = "none"
-            document.getElementById("Alumni").style.display = "inherit"
-          }
-
         }
       </script>
 
