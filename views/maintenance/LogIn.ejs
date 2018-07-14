@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Add Member</title>
+
+  <% include ../partials/header %>
+
+</head>
+
+<body>
+  <!-- Sidenav Bar -->
+  <% include ../partials/sidenav %>
+
+    <!-- Background -->
+    <div class="" style="background: black;">
+      <img src="/images/Group/about.png" alt="Group Photo" class="pageBackgroundIMG">
+    </div>
+
+    <div class="container" style="margin-bottom: 50px;">
+      <div class="row">
+        <h1 style="text-align: center">Log In</h1>
+
+        <form class="" action="index.html" method="post">
+          <input type="text" name="username" value="" placeholder="Username">
+          <input type="password" name="password" value="" placeholder="Password">
+          <button type="button" name="button">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <% include ../partials/footer %>
+
+      <script type="text/javascript">
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+          document.getElementById("mySidenav").classList.remove("close");
+          document.getElementById("mySidenav").classList.add("open");
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+          document.getElementById("mySidenav").classList.remove("open");
+          document.getElementById("mySidenav").classList.add("close");
+        }
+
+      </script>
+
+
+</body>
+
+</html>

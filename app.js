@@ -61,6 +61,10 @@ app.get("/events", function(req, res) {
 });
 
 // ~~~ Pages for members ~~~
+app.get("/LogIn", function(req, res) {
+  res.render("maintenance/LogIn");
+});
+
 app.get("/maintenance", function(req, res) {
   res.render("maintenance/maintenanceMain");
 });
