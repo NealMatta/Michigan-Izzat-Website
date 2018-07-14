@@ -42,3 +42,5 @@
 - Small Q&A
   - Interested in sponsoring?
     - Refer to contact sections
+
+node-sass -o public/css public/css/style.scss -w

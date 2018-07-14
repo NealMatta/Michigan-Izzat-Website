@@ -1,16 +1,13 @@
 /* ========================================
       CSS Elements used in all pages
 ======================================== */
-
 body {
   width: 100%;
   min-height: 100%;
   font-family: 'Jura', sans-serif;
   font-weight: 400;
 }
-
 /* IZZAT Logo */
-
 @font-face {
   font-family: logo;
   src: url("font/techno_hideo.ttf");
@@ -37,25 +34,21 @@ body {
   overflow-x: hidden;
   padding-top: 20px;
   transition: 0.5s;
-}
 
-.sidenav a {
-  /* padding: 8px 8px 8px 32px; */
-  text-decoration: none;
-  font-size: 25px;
-  /* color: #818181; */
-  display: block;
-  transition: 0.3s;
+  a {
+    /* padding: 8px 8px 8px 32px; */
+    text-decoration: none;
+    font-size: 25px;
+    /* color: #818181; */
+    display: block;
+    transition: 0.3s;
+  }
 }
-
 /* When you mouse over the navigation links, change their color */
-
 .sidenav a:hover {
   color: #337ab7;
 }
-
 /* Position and style the close button (top right corner) */
-
 .sidenav .closebtn {
   font-size: 4em;
   margin-left: 90%;
@@ -65,20 +58,17 @@ body {
   transition: margin-left 0.5s;
   padding: 20px;
 }
-
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;
   }
+
   .sidenav a {
     font-size: 18px;
   }
 }
-
 /* Plus Button for the landing portion */
-
 .maxminBTN {
   font-size: 5em;
   border: none;
@@ -87,9 +77,7 @@ body {
   cursor: pointer;
   color: gold;
 }
-
 /* Aligning the button correctly */
-
 .openNavBTN {
   position: absolute;
   /* vertical-align: middle; */
@@ -109,18 +97,16 @@ body {
 .eachSection {
   width: 60%;
   padding: 30px 0;
-}
 
-.eachSection h1 {
-  text-align: center;
-}
+  h1 {
+    text-align: center;
+  }
 
-.eachSection p {
-  font-size: 15px;
+  p {
+    font-size: 15px;
+  }
 }
-
 /* Gradient transparent - color - transparent */
-
 hr.style-two {
   border: 0;
   height: 1px;
@@ -128,9 +114,7 @@ hr.style-two {
   width: 75%;
   margin-bottom: 0;
 }
-
 /* Footer */
-
 #footer {
   width: 100%;
   background-color: #1f1f1f;
@@ -149,19 +133,19 @@ hr.style-two {
 .footerLinks {
   padding-top: 20px;
   padding-bottom: 10px;
+
+  ul > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+  }
 }
 
-.footerLinks ul>li>a {
-  position: relative;
-  display: block;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: white;
-  text-transform: uppercase;
-  transition: 0.3s ease-in-out;
-}
-
-.footerLinks ul>li>a:hover {
+.footerLinks ul > li > a:hover {
   color: gold;
 }
 
@@ -172,40 +156,36 @@ hr.style-two {
 .footerLogo h1 {
   font-size: 4em;
 }
-
 /* Hyperlinks to the different social media outlets */
-
 .social-icons {
   margin-left: -40px;
   padding-top: 20px;
   padding-bottom: 10px;
-}
 
-.social-icons ul {
-  list-style-type: none;
-  display: inline-flex;
-}
+  ul {
+    list-style-type: none;
+    display: inline-flex;
+  }
 
-.social-icons ul>li>a {
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-color: #bbbbbb;
-  color: #1f1f1f;
-  line-height: 30px;
-  font-size: 15px;
-  border-radius: 100%;
-  transition: 0.3s ease-in-out;
-  margin: 0 10px;
-  background-color: gold;
-}
+  ul > li > a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #bbbbbb;
+    color: #1f1f1f;
+    line-height: 30px;
+    font-size: 15px;
+    border-radius: 100%;
+    transition: 0.3s ease-in-out;
+    margin: 0 10px;
+    background-color: gold;
+  }
 
-.social-icons ul>li>a:hover {
-  color: #fff;
+  ul > li > a:hover {
+    color: #fff;
+  }
 }
-
 /* ID for hyperlink to Neal Matta's website */
-
 #Neal {
   text-decoration: none;
   color: #333;
@@ -235,13 +215,10 @@ hr.style-two {
   padding: 0;
   overflow: hidden;
 }
-
 /* ========================================
                 Landing page
 ======================================== */
-
 /* Nav bar on the left hand side of landing page */
-
 .content {
   position: fixed;
   left: 0;
@@ -254,10 +231,8 @@ hr.style-two {
   padding: 20px;
   height: 100%;
 }
-
 /* Editing all of the nav bar directory pages  */
-
-.NavBarLinks ul>li>a {
+.NavBarLinks ul > li > a {
   /* background: yellow; */
   font-size: 1.7vw;
   text-align: left;
@@ -265,9 +240,7 @@ hr.style-two {
   text-transform: uppercase;
   font-weight: 600;
 }
-
 /* Pause and Play Buttons */
-
 .landingBTN {
   font-size: 1.5em;
   border: none;
@@ -281,9 +254,7 @@ hr.style-two {
   background: #ddd;
   color: #337ab7;
 }
-
 /* Background Video of landing page */
-
 #myVideo {
   position: fixed;
   right: 0;
@@ -292,38 +263,41 @@ hr.style-two {
   min-height: 100%;
 }
 
-#muteBTN, #pauseBTN {
+#muteBTN,
+#pauseBTN {
   padding: 5px;
 }
 
 #buttons {
   left: 0;
 }
-
 /* ========================================
                 About page
 ======================================== */
-
 /* Images of the members */
-
 .memberPics {
   margin-bottom: 25px;
   text-align: center;
-}
 
-.memberPics img {
-  width: 100%;
-  border-radius: 100%;
-  border: solid 3px gold;
-}
+  img {
+    width: 100%;
+    border-radius: 100%;
+    border: solid 3px gold;
+  }
 
-.memberPics h4 {
-  font-size: 100%;
-}
+  h4 {
+    font-size: 100%;
+  }
 
-.memberPics h3 {
-  font-size: 100%;
+  h3 {
+    font-size: 100%;
+  }
 }
+// .memberPics img {
+//   width: 100%;
+//   border-radius: 100%;
+//   border: solid 3px gold;
+// }
 
 .memberPics .memberPics #note {
   text-align: center;
@@ -355,11 +329,9 @@ hr.divider {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-
 /* ========================================
                 Contact page
 ======================================== */
-
 body {
   font-family: 'Jura', sans-serif;
   font-weight: 400;
@@ -400,36 +372,35 @@ body {
 
 #submitBTN {
   text-align: center;
-}
 
-#submitBTN input {
-  width: auto;
-  background: white;
-  border: solid 3px gold;
-  transition: 0.3s ease-in-out;
-}
+  input {
+    width: auto;
+    background: white;
+    border: solid 3px gold;
+    transition: 0.3s ease-in-out;
+  }
 
-#submitBTN input:hover {
-  background: #1f1f1f;
-  color: gold;
+  input:hover {
+    background: #1f1f1f;
+    color: gold;
+  }
+
 }
 
 /* ========================================
                 Donate page
 ======================================== */
-
 .QA {
   padding-bottom: 5px;
-}
 
-.QA h2 {
-  font-weight: 600;
+  h2 {
+    font-weight: 600;
+  }
 }
 
 /* ========================================
                 Events page
 ======================================== */
-
 body {
   font-weight: 400;
 }
@@ -437,52 +408,52 @@ body {
 .yearsBTN {
   margin: 3% 0;
   text-align: center;
+
+  button {
+    border: solid 3px gold;
+    font-size: 25px;
+    border-radius: 10%;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+  }
+
+  button:hover {
+   background-color: #1f1f1f;
+   color: gold;
+ }
 }
 
-.yearsBTN button {
-  border: solid 3px gold;
-  font-size: 25px;
-  border-radius: 10%;
-  transition: 0.3s ease-in-out;
-  font-weight: 600;
+.PPAA {
+  h2 {
+    text-align: center;
+    font-size: 25px;
+  }
+  p {
+    font-size: 14px;
+  }
+  iframe {
+    padding-bottom: 30px;
+  }
 }
 
-.yearsBTN button:hover {
-  background-color: #1f1f1f;
-  color: gold;
-}
-
-.PPAA h2 {
-  text-align: center;
-  font-size: 25px;
-}
-
-.PPAA p {
-  font-size: 14px;
-}
-
-.PPAA iframe {
-  padding-bottom: 30px;
-}
 
 .CompAwards {
   text-align: center;
-}
 
-.CompAwards a {
-  text-decoration: none;
-  color: gold;
-  transition: 0.3s ease-in-out;
-}
+  a {
+    text-decoration: none;
+    color: gold;
+    transition: 0.3s ease-in-out;
+  }
 
-.CompAwards a:hover {
-  color: #1f1f1f;
+  a:hover {
+    color: #1f1f1f;
+  }
 }
 
 /* ========================================
             New Member Form
 ======================================== */
-
 #form-layout {
   width: 60%;
   margin: 30px auto;
@@ -492,11 +463,9 @@ body {
 #radio-choice label {
   font-weight: 400;
 }
-
 /* ========================================
                 Other
 ======================================== */
-
 .form-overview a {
   /* font-size: 20px;
   text-decoration: none;
