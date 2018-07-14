@@ -1,19 +1,19 @@
+
+
 var express = require("express"),
-  app = express(),
-  bodyParser = require("body-parser"),
-  path = require('path'),
-  mongoose = require('mongoose'),
-  Member = require('./models/members');
+    app = express(),
+    path = require('path'),
+    mongoose = require('mongoose'),
+    bodyParser = require("body-parser"),
+    methodOverride = require('method-override'),
+    Member = require('./models/members');
 
-// Connecting to the Database
-mongoose.connect("mongodb://localhost/izzat");
 
-app.set("view engine", "ejs");
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.urlencoded({
-  extended: true
-})); // Body parser used to get code from POST request
-
+mongoose.connect("mongodb://localhost/izzat"); // Connecting to the Database
+app.set("view engine", "ejs"); // So I don't need to write .ejs
+app.use(express.static(path.join(__dirname, 'public'))); // Used to stylesheets
+app.use(bodyParser.urlencoded({extended: true})); // Body parser used to get code from POST request
+app.use(methodOverride('_method')); // Change Put --> Post
 // Member.create({
 //   current: true,
 //   name: "Vineeth",
@@ -31,72 +31,103 @@ app.use(bodyParser.urlencoded({
 // );
 
 // ========== Routes ==========
+
+// ~~~ Pages for visitors ~~~
 app.get("/", function(req, res) {
-  res.render("landing");
+  res.render("main/landing");
 });
 
 app.get("/about", function(req, res) {
   Member.find({}, function(err, members) {
     if (err) { // If there is an error, log it and render back the landing page
       console.log(err);
-      res.render("landing");
+      res.render("main/landing");
     } else {
-      res.render("about", { members: members });
+      res.render("main/about", { members: members });
     }
   });
 });
 
-// Section Overlay to add new items
-app.get("/updatingOverview", function(req, res) {
-  res.render("addingItems");
+app.get("/contact", function(req, res) {
+  res.render("main/contact");
+});
+
+app.get("/donate", function(req, res) {
+  res.render("main/donate");
+});
+
+app.get("/events", function(req, res) {
+  res.render("main/events");
+});
+
+// ~~~ Pages for members ~~~
+app.get("/maintenance", function(req, res) {
+  res.render("maintenance/maintenanceMain");
+});
+
+app.get("/maintenance/Member/Edit", function(req, res) {
+  Member.find({}, function(err, members) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render("maintenance/member/ShowAll", { members: members });
+    }
+  });
 });
 
 // New form for members
-app.get("/updatingOverview/Member/New", function(req, res) {
-  res.render("addMember");
+app.get("/maintenance/Member/New", function(req, res) {
+  res.render("maintenance/member/New");
 });
 
-app.post("/updatingOverview/Member/New", function(req, res) {
+// Adding members to Database
+app.post("/maintenance/Member/New", function(req, res) {
   Member.create(req.body.member, function(err, newMem) {
     if (err) {
-      res.render("addMember");
+      res.render("maintenance/member/New");
     } else {
-      res.redirect("/updatingOverview");
+      res.redirect("maintenance");
     }
   });
 });
 
 // Updating Existing Members
-app.get("/updatingOverview/Member/Change", function(req, res) {
-  Member.find({}, function(err, members) {
+app.get("/maintenance/Member/Update/:id", function(req, res){
+  Member.findById(req.params.id, function(err, individualMember){
     if (err) {
       console.log(err);
     } else {
-      res.render("searchMember", { members: members });
+      console.log(individualMember);
+      res.render("maintenance/member/Update", {individualMember: individualMember});
     }
   });
 });
 
-app.get("/updatingOverview/Member/Update/:id", function(req, res){
-
+// Updating members in database
+app.put("/maintenance/Member/Update/:id", function(req, res){
+  console.log("Put Request processed");
+  Member.findByIdAndUpdate(req.params.id, req.body.member, function(err, individualMember){
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(req.body.member);
+      var showUrl = "/maintenance/Member/Update/" + individualMember._id;
+      res.redirect(showUrl);
+    }
+  });
 });
 
-app.get("/updatingOverview/Member/Delete/:id", function(req, res){
-
+app.delete("/maintenance/Member/Delete/:id", function(req, res){
+  Member.findById(req.params.id, function(err, member){
+    if (err) {
+      console.log(err);
+    } else {
+      member.remove();
+      res.redirect("/maintenance/Member/Edit");
+    }
+  });
 });
 
-
-app.get("/contact", function(req, res) {
-  res.render("contact");
-});
-
-app.get("/donate", function(req, res) {
-  res.render("donate");
-});
-
-app.get("/events", function(req, res) {
-  res.render("events");
-});
 
 // Failsafe to catch all broken Links
 app.get("*", function(req, res) {

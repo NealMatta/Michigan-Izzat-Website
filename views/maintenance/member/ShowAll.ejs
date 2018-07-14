@@ -5,13 +5,14 @@
   <meta charset="utf-8">
   <title>Update Member</title>
 
-  <% include partials/header %>
+  <% include ../../partials/header %>
 
 </head>
 
+
 <body>
   <!-- Sidenav Bar -->
-  <% include partials/sidenav %>
+  <% include ../../partials/sidenav %>
 
     <!-- Background -->
     <div class="" style="background: black;">
@@ -27,12 +28,17 @@
             <ul>
               <% if (member["current"]){ %>
                   <li> <%= member["name"] %> </li>
-                  <button>Update</button>
-                  <button>Delete</button>
+                  <p><a href="/maintenance/Member/Update/<%= member._id %>" class="btn btn-primary">Update</a></p>
+                  <form  method="POST" action="/maintenance/Member/Delete/<%= member._id %>?_method=DELETE">
+                        <button class="ui red basic button" type="submit">Delete</button>
+                  </form>
+                  <!-- <p><a href="" class="btn btn-primary">Delete</a></p> -->
               <% }; %>
             </ul>
             <% }); %>
           </div>
+
+
 
           <div class="col-lg-6">
             <h2>Alumni</h2>
@@ -40,8 +46,10 @@
             <ul>
               <% if (!member["current"]){ %>
                   <li> <%= member["name"] %> </li>
-                  <button>Update</button>
-                  <button>Delete</button>
+                  <p><a href="/maintenance/Member/Update/<%= member._id %>" class="btn btn-primary">Update</a></p>
+                  <form  method="POST" action="/maintenance/Member/Delete/<%= member._id %>?_method=DELETE">
+                        <button class="ui red basic button" type="submit">Delete</button>
+                  </form>
               <% }; %>
             </ul>
             <% }); %>
@@ -50,7 +58,7 @@
     </div>
 
 
-    <% include partials/footer %>
+    <% include ../../partials/footer %>
 
       <script type="text/javascript">
         /* Set the width of the side navigation to 250px */

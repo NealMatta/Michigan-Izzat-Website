@@ -472,8 +472,23 @@ body{
 }
 
 /* ========================================
+            New Member Form
+======================================== */
+#form-layout{
+  width: 60%;
+  margin: 30px auto;
+  /* text-align: center; */
+}
+
+#radio-choice label{
+  font-weight: 400;
+}
+
+
+/* ========================================
                 Other
 ======================================== */
+
 
 .form-overview a{
   /* font-size: 20px;
