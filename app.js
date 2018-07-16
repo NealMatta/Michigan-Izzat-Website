@@ -1,12 +1,16 @@
 
 
-var express = require("express"),
-    app = express(),
-    path = require('path'),
-    mongoose = require('mongoose'),
-    bodyParser = require("body-parser"),
-    methodOverride = require('method-override'),
-    Member = require('./models/members');
+var express               = require("express"),
+    app                   = express(),
+    path                  = require('path'),
+    mongoose              = require('mongoose'),
+    passport              = require("passport"),
+    bodyParser            = require("body-parser"),
+    LocalStrategy         = require("passport-local"),
+    methodOverride        = require('method-override'),
+    passportLocalMongoose = require("passport-local-mongoose"),
+    Member                = require('./models/members');
+    User                  = require('./models/user');
 
 
 mongoose.connect("mongodb://localhost/izzat"); // Connecting to the Database
@@ -14,21 +18,19 @@ app.set("view engine", "ejs"); // So I don't need to write .ejs
 app.use(express.static(path.join(__dirname, 'public'))); // Used to stylesheets
 app.use(bodyParser.urlencoded({extended: true})); // Body parser used to get code from POST request
 app.use(methodOverride('_method')); // Change Put --> Post
-// Member.create({
-//   current: true,
-//   name: "Vineeth",
-//   image: "Nothing yet",
-//   year: "Senior",
-//   hasPosition: true,
-//   position: "dictator"
-// }, function(err, mem){
-//   if (err){
-//     console.log(err);
-//   } else {
-//     console.log(mem);
-//   }
-// }
-// );
+app.use(require("express-session")({
+    secret: "Rusty is the best and cutest dog in the world",
+    resave: false,
+    saveUninitialized: false
+}));
+
+// Authentication
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 // ========== Routes ==========
 
@@ -65,11 +67,45 @@ app.get("/LogIn", function(req, res) {
   res.render("maintenance/LogIn");
 });
 
-app.get("/maintenance", function(req, res) {
+app.post("/LogIn", passport.authenticate("local", {
+  successRedirect: "/maintenance",
+  failureRedirect: "/LogIn"
+}), function(req, res) {
+  // res.send("This is the post request")
+  // res.render("maintenance/LogIn");
+});
+
+app.get("/Register", function(req, res) {
+  res.render("maintenance/Register");
+});
+
+var authorization_code = "MichiganIzzat"
+app.post("/Register", function(req, res) {
+  if (req.body.authCode === authorization_code){
+    User.register(new User({username: req.body.username}), req.body.password, function(err, user){
+        if(err){
+            console.log(err);
+            return res.render('maintenance/Register');
+        }
+        passport.authenticate("local")(req, res, function(){
+           res.redirect("/maintenance");
+        });
+    });
+  } else {
+    res.render("maintenance/register");
+  }
+});
+
+app.get("/LogOut", function(req, res) {
+  req.logout();
+  res.redirect("/");
+});
+
+app.get("/maintenance", isLoggedIn, function(req, res) {
   res.render("maintenance/maintenanceMain");
 });
 
-app.get("/maintenance/Member/Edit", function(req, res) {
+app.get("/maintenance/Member/Edit", isLoggedIn, function(req, res) {
   Member.find({}, function(err, members) {
     if (err) {
       console.log(err);
@@ -80,7 +116,7 @@ app.get("/maintenance/Member/Edit", function(req, res) {
 });
 
 // New form for members
-app.get("/maintenance/Member/New", function(req, res) {
+app.get("/maintenance/Member/New", isLoggedIn, function(req, res) {
   res.render("maintenance/member/New");
 });
 
@@ -96,7 +132,7 @@ app.post("/maintenance/Member/New", function(req, res) {
 });
 
 // Updating Existing Members
-app.get("/maintenance/Member/Update/:id", function(req, res){
+app.get("/maintenance/Member/Update/:id", isLoggedIn, function(req, res){
   Member.findById(req.params.id, function(err, individualMember){
     if (err) {
       console.log(err);
@@ -108,7 +144,7 @@ app.get("/maintenance/Member/Update/:id", function(req, res){
 });
 
 // Updating members in database
-app.put("/maintenance/Member/Update/:id", function(req, res){
+app.put("/maintenance/Member/Update/:id", isLoggedIn, function(req, res){
   console.log("Put Request processed");
   Member.findByIdAndUpdate(req.params.id, req.body.member, function(err, individualMember){
     if (err) {
@@ -121,7 +157,8 @@ app.put("/maintenance/Member/Update/:id", function(req, res){
   });
 });
 
-app.delete("/maintenance/Member/Delete/:id", function(req, res){
+// Deleting Members from database
+app.delete("/maintenance/Member/Delete/:id", isLoggedIn, function(req, res){
   Member.findById(req.params.id, function(err, member){
     if (err) {
       console.log(err);
@@ -132,6 +169,12 @@ app.delete("/maintenance/Member/Delete/:id", function(req, res){
   });
 });
 
+function isLoggedIn(req, res, next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    res.redirect("/login");
+}
 
 // Failsafe to catch all broken Links
 app.get("*", function(req, res) {

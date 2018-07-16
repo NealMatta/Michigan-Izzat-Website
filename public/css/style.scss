@@ -488,3 +488,18 @@ body {
 .form-overview h1 {
   text-align: center;
 }
+
+.log-in {
+  .form-group {
+    text-align: center;
+  }
+  button {
+    width: 20%;
+    margin: 0 auto;
+
+  }
+  input {
+    width: 50%;
+    padding: 5px;
+  }
+}

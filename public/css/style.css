@@ -1,29 +1,24 @@
 /* ========================================
       CSS Elements used in all pages
 ======================================== */
-
 body {
   width: 100%;
   min-height: 100%;
   font-family: 'Jura', sans-serif;
-  font-weight: 400;
-}
+  font-weight: 400; }
 
 /* IZZAT Logo */
 @font-face {
   font-family: logo;
-  src: url(font/techno_hideo.ttf);
-}
+  src: url("font/techno_hideo.ttf"); }
 
 .logo {
   font-family: logo;
   font-size: 7vw;
-  color: Gold;
-}
+  color: Gold; }
 
 .logoHyperlink:hover {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .sidenav {
   height: 100%;
@@ -35,208 +30,161 @@ body {
   background-color: #111;
   overflow-x: hidden;
   padding-top: 20px;
-  transition: 0.5s;
-
-}
-
-/* The navigation menu links */
-
-.sidenav a {
-  /* padding: 8px 8px 8px 32px; */
-  text-decoration: none;
-  font-size: 25px;
-  /* color: #818181; */
-  display: block;
-  transition: 0.3s;
-}
+  transition: 0.5s; }
+  .sidenav a {
+    /* padding: 8px 8px 8px 32px; */
+    text-decoration: none;
+    font-size: 25px;
+    /* color: #818181; */
+    display: block;
+    transition: 0.3s; }
 
 /* When you mouse over the navigation links, change their color */
-
 .sidenav a:hover {
-  color: #337ab7;
-}
+  color: #337ab7; }
 
 /* Position and style the close button (top right corner) */
-
 .sidenav .closebtn {
   font-size: 4em;
-  margin-left: 90%;
-}
+  margin-left: 90%; }
 
 #main {
-  transition: margin-left .5s;
-  padding: 20px;
-}
+  transition: margin-left 0.5s;
+  padding: 20px; }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-
 @media screen and (max-height: 450px) {
   .sidenav {
-    padding-top: 15px;
-  }
+    padding-top: 15px; }
   .sidenav a {
-    font-size: 18px;
-  }
-}
+    font-size: 18px; } }
 
 /* Plus Button for the landing portion */
-
 .maxminBTN {
   font-size: 5em;
   border: none;
   background: transparent;
   /* color: gold; */
   cursor: pointer;
-  color: gold;
-}
+  color: gold; }
 
 /* Aligning the button correctly */
-
 .openNavBTN {
   position: absolute;
   /* vertical-align: middle; */
   display: flex;
   align-items: center;
   height: 100%;
-  padding-left: 1%;
-}
+  padding-left: 1%; }
 
 .pageBackgroundIMG {
   width: 100%;
   display: block;
   margin-left: auto;
-  margin-right: auto
-}
+  margin-right: auto; }
 
 .eachSection {
   width: 60%;
-}
+  padding: 30px 0; }
+  .eachSection h1 {
+    text-align: center; }
+  .eachSection p {
+    font-size: 15px; }
 
 /* Gradient transparent - color - transparent */
-
 hr.style-two {
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   width: 75%;
-  margin-bottom: 0;
-}
-
-.eachSection h1 {
-  text-align: center;
-}
+  margin-bottom: 0; }
 
 /* Footer */
-
 #footer {
   width: 100%;
   background-color: #1f1f1f;
   position: relative;
   padding: 2%;
-  text-align: center;
-}
+  text-align: center; }
 
 .footer-nav {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-  display: inline-flex;
-}
+  display: inline-flex; }
 
 .footerLinks {
   padding-top: 20px;
-  padding-bottom: 10px;
-}
+  padding-bottom: 10px; }
+  .footerLinks ul > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out; }
 
-.footerLinks ul>li>a {
-  position: relative;
-  display: block;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: white;
-  text-transform: uppercase;
-  transition: 0.3s ease-in-out;
-}
-
-.footerLinks ul>li>a:hover {
-  color: gold;
-}
+.footerLinks ul > li > a:hover {
+  color: gold; }
 
 .footerLogo:hover {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .footerLogo h1 {
-  font-size: 4em;
-}
+  font-size: 4em; }
 
 /* Hyperlinks to the different social media outlets */
-
 .social-icons {
   margin-left: -40px;
   padding-top: 20px;
-  padding-bottom: 10px;
-}
-
-.social-icons ul {
-  list-style-type: none;
-  display: inline-flex;
-}
-
-.social-icons ul>li>a {
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-color: #bbbbbb;
-  color: #1f1f1f;
-  line-height: 30px;
-  font-size: 15px;
-  border-radius: 100%;
-  transition: 0.3s ease-in-out;
-  margin: 0 10px;
-  background-color: gold;
-}
-
-.social-icons ul>li>a:hover {
-  color: #fff;
-}
+  padding-bottom: 10px; }
+  .social-icons ul {
+    list-style-type: none;
+    display: inline-flex; }
+  .social-icons ul > li > a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #bbbbbb;
+    color: #1f1f1f;
+    line-height: 30px;
+    font-size: 15px;
+    border-radius: 100%;
+    transition: 0.3s ease-in-out;
+    margin: 0 10px;
+    background-color: gold; }
+  .social-icons ul > li > a:hover {
+    color: #fff; }
 
 /* ID for hyperlink to Neal Matta's website */
-
 #Neal {
   text-decoration: none;
   color: #333;
-  transition: 0.3s ease-in-out;
-}
+  transition: 0.3s ease-in-out; }
 
 #Neal:hover {
-  color: gold;
-}
+  color: gold; }
 
 #copyright {
-  color: #595959;
-}
+  color: #595959; }
 
 .eachSectionTitle {
-  font-weight: 700;
-}
+  font-weight: 700; }
 
-.open{
+.open {
   width: 20%;
   padding: 20px;
-  overflow: visible;
-}
+  overflow: visible; }
 
-.close{
-  width: 0%;
-  padding: 0px;
-  overflow: hidden;
-}
+.close {
+  width: 0;
+  padding: 0;
+  overflow: hidden; }
 
 /* ========================================
                 Landing page
 ======================================== */
-
 /* Nav bar on the left hand side of landing page */
 .content {
   position: fixed;
@@ -248,19 +196,16 @@ hr.style-two {
   color: #f1f1f1;
   width: 20%;
   padding: 20px;
-  height: 100%;
-}
+  height: 100%; }
 
 /* Editing all of the nav bar directory pages  */
-
-.NavBarLinks ul>li>a {
+.NavBarLinks ul > li > a {
   /* background: yellow; */
   font-size: 1.7vw;
   text-align: left;
   font-family: 'Jura', sans-serif;
   text-transform: uppercase;
-  font-weight: 600;
-}
+  font-weight: 600; }
 
 /* Pause and Play Buttons */
 .landingBTN {
@@ -269,13 +214,11 @@ hr.style-two {
   background: transparent;
   color: gold;
   cursor: pointer;
-  padding: 0;
-}
+  padding: 0; }
 
 .landingBTN:hover {
   background: #ddd;
-  color: #337ab7;
-}
+  color: #337ab7; }
 
 /* Background Video of landing page */
 #myVideo {
@@ -283,214 +226,166 @@ hr.style-two {
   right: 0;
   bottom: 0;
   min-width: 100%;
-  min-height: 100%;
-}
+  min-height: 100%; }
 
-#pauseBTN, #muteBTN {
-  padding: 5px;
-}
+#muteBTN,
+#pauseBTN {
+  padding: 5px; }
 
 #buttons {
-  left: 0;
-}
+  left: 0; }
 
 /* ========================================
                 About page
 ======================================== */
 /* Images of the members */
-
 .memberPics {
   margin-bottom: 25px;
-  text-align: center;
-}
-
-.memberPics img {
-  width: 100%;
-  border-radius: 100%;
-  border: solid 3px gold;
-}
-
-.memberPics h4 {
-  font-size: 100%;
-}
-
-.memberPics h3 {
-  font-size: 100%;
-}
+  text-align: center; }
+  .memberPics img {
+    width: 100%;
+    border-radius: 100%;
+    border: solid 3px gold; }
+  .memberPics h4 {
+    font-size: 100%; }
+  .memberPics h3 {
+    padding-top: 10px;
+    font-size: 1.2rem; }
+  .memberPics h5 {
+    font-size: 100%; }
 
 #note {
   text-align: center;
   color: #333;
-  font-size: 75%;
-}
+  font-size: 75%; }
 
 .ActiveAlumBTN {
   margin-bottom: 10px;
-  text-align: center;
-}
+  text-align: center; }
 
 .ActiveAlumBTN button {
   border: solid 3px gold;
   font-size: 30px;
   border-radius: 10%;
   transition: 0.3s ease-in-out;
-  font-weight: 600;
-}
+  font-weight: 600; }
 
 .ActiveAlumBTN button:hover {
   background-color: #1f1f1f;
-  color: gold;
-}
+  color: gold; }
 
 hr.divider {
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
 
 /* ========================================
                 Contact page
 ======================================== */
-
 body {
   font-family: 'Jura', sans-serif;
-  font-weight: 400;
-}
+  font-weight: 400; }
 
-.contact p{
+.contact p {
   text-align: center;
-  margin-bottom: 30px;
-}
+  margin-bottom: 30px; }
+
 .ContactForm input, textarea {
   padding: 5px;
   border: 1px solid #1f1f1f;
-  border-radius: 5px;
-}
+  border-radius: 5px; }
 
 .ContactForm input {
   width: 100%;
   margin-bottom: 30px;
-  outline: none;
-}
+  outline: none; }
 
 .ContactForm textarea {
   width: 100%;
   height: 150px;
   outline: none;
   box-sizing: border-box;
-  resize: none;
-}
+  resize: none; }
 
 .ContactForm input:focus {
-  border: 1px solid gold;
-}
+  border: 1px solid gold; }
 
 .ContactForm textarea:focus {
-  border: 1px solid gold;
-}
+  border: 1px solid gold; }
 
-#submitBTN{
-  text-align: center;
-}
-
-#submitBTN input{
-  width: auto;
-  background: white;
-  border: solid 3px gold;
-  transition: 0.3s ease-in-out;
-}
-
-#submitBTN input:hover{
-  background: #1f1f1f;
-  color: gold;
-}
+#submitBTN {
+  text-align: center; }
+  #submitBTN input {
+    width: auto;
+    background: white;
+    border: solid 3px gold;
+    transition: 0.3s ease-in-out; }
+  #submitBTN input:hover {
+    background: #1f1f1f;
+    color: gold; }
 
 /* ========================================
                 Donate page
 ======================================== */
-
-.QA{
-  padding-bottom: 5px;
-}
-
-.QA h2{
-  font-weight: 600;
-}
+.QA {
+  padding-bottom: 5px; }
+  .QA h2 {
+    font-weight: 600; }
 
 /* ========================================
                 Events page
 ======================================== */
-
-body{
-  font-weight: 400;
-}
+body {
+  font-weight: 400; }
 
 .yearsBTN {
   margin: 3% 0;
+  text-align: center; }
+  .yearsBTN button {
+    border: solid 3px gold;
+    font-size: 25px;
+    border-radius: 10%;
+    transition: 0.3s ease-in-out;
+    font-weight: 600; }
+  .yearsBTN button:hover {
+    background-color: #1f1f1f;
+    color: gold; }
+
+.PPAA h2 {
   text-align: center;
-}
+  font-size: 25px; }
 
-.yearsBTN button {
-  border: solid 3px gold;
-  font-size: 25px;
-  border-radius: 10%;
-  transition: 0.3s ease-in-out;
-  font-weight: 600;
-}
+.PPAA p {
+  font-size: 14px; }
 
-.yearsBTN button:hover {
-  background-color: #1f1f1f;
-  color: gold;
-}
+.PPAA iframe {
+  padding-bottom: 30px; }
 
-.PPAA h2{
-  text-align: center;
-  font-size: 25px;
-}
-
-.PPAA p{
-  font-size: 14px;
-}
-
-.PPAA iframe{
-  padding-bottom: 30px;
-}
-
-.CompAwards{
-  text-align: center;
-}
-
-.CompAwards a{
-  text-decoration: none;
-  color: gold;
-  transition: 0.3s ease-in-out;
-}
-
-.CompAwards a:hover{
-  color: #1f1f1f;
-}
+.CompAwards {
+  text-align: center; }
+  .CompAwards a {
+    text-decoration: none;
+    color: gold;
+    transition: 0.3s ease-in-out; }
+  .CompAwards a:hover {
+    color: #1f1f1f; }
 
 /* ========================================
             New Member Form
 ======================================== */
-#form-layout{
+#form-layout {
   width: 60%;
   margin: 30px auto;
-  /* text-align: center; */
-}
+  /* text-align: center; */ }
 
-#radio-choice label{
-  font-weight: 400;
-}
-
+#radio-choice label {
+  font-weight: 400; }
 
 /* ========================================
                 Other
 ======================================== */
-
-
-.form-overview a{
+.form-overview a {
   /* font-size: 20px;
   text-decoration: none;
   border: solid 1px black;
@@ -500,15 +395,22 @@ body{
   margin: 5px;
   background-color: #f7f7f7;
   color: black; */
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */ }
 
-}
-
-.form-overview a:hover{
+.form-overview a:hover {
   background-color: white;
-  /* box-shadow: 0 4px 8px 0 rgba(255, 215, 0, 0.2), 0 6px 20px 0 rgba(255, 215, 0, 0.19); */
-}
+  /* box-shadow: 0 4px 8px 0 rgba(255, 215, 0, 0.2), 0 6px 20px 0 rgba(255, 215, 0, 0.19); */ }
 
-.form-overview h1{
-  text-align: center;
-}
+.form-overview h1 {
+  text-align: center; }
+
+.log-in .form-group {
+  text-align: center; }
+
+.log-in button {
+  width: 20%;
+  margin: 0 auto; }
+
+.log-in input {
+  width: 50%;
+  padding: 5px; }

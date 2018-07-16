@@ -20,14 +20,17 @@
 
     <div class="container" style="margin-bottom: 50px;">
       <div class="row">
-        <h1 style="text-align: center">Log In</h1>
+        <h1 style="text-align: center">Register</h1>
 
-        <form class="log-in" action="/LogIn" method="POST">
+        <form class="log-in" action="/Register" method="POST">
           <div class="form-group">
-            <input type="text" name="username" value="" placeholder="Username">
+            <input type="text" name="username" placeholder="Username">
           </div>
           <div class="form-group">
-            <input type="password" name="password" value="" placeholder="Password">
+            <input type="password" name="password" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <input type="text" name="authCode" placeholder="Authentication Code">
           </div>
           <div class="form-group">
             <button class="btn btn-primary btn-block">Submit!</button>
