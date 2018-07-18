@@ -27,12 +27,19 @@
             <% members.forEach(function(member){ %>
             <ul>
               <% if (member["current"]){ %>
-                  <li> <%= member["name"] %> </li>
-                  <p><a href="/maintenance/Member/Update/<%= member._id %>" class="btn btn-primary">Update</a></p>
-                  <form  method="POST" action="/maintenance/Member/Delete/<%= member._id %>?_method=DELETE">
-                        <button class="ui red basic button" type="submit">Delete</button>
-                  </form>
-                  <!-- <p><a href="" class="btn btn-primary">Delete</a></p> -->
+                <div class="row">
+                  <div class="col-lg-4">
+                    <li> <%= member["name"] %> </li>
+                  </div>
+                  <div class="col-lg-4">
+                    <p><a href="/maintenance/Member/Update/<%= member._id %>" class="btn btn-primary">Update</a></p>
+                  </div>
+                  <div class="col-lg-4">
+                    <form method="POST" action="/maintenance/Member/Delete/<%= member._id %>?_method=DELETE">
+                        <button class="" type="submit">Delete</button>
+                    </form>
+                  </div>
+                </div>
               <% }; %>
             </ul>
             <% }); %>
@@ -45,11 +52,19 @@
             <% members.forEach(function(member){ %>
             <ul>
               <% if (!member["current"]){ %>
-                  <li> <%= member["name"] %> </li>
-                  <p><a href="/maintenance/Member/Update/<%= member._id %>" class="btn btn-primary">Update</a></p>
-                  <form  method="POST" action="/maintenance/Member/Delete/<%= member._id %>?_method=DELETE">
-                        <button class="ui red basic button" type="submit">Delete</button>
-                  </form>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <li> <%= member["name"] %> </li>
+                  </div>
+                  <div class="col-lg-4">
+                    <p><a href="/maintenance/Member/Update/<%= member._id %>" class="btn btn-primary">Update</a></p>
+                  </div>
+                  <div class="col-lg-4">
+                    <form method="POST" action="/maintenance/Member/Delete/<%= member._id %>?_method=DELETE">
+                        <button class="" type="submit">Delete</button>
+                    </form>
+                  </div>
+                </div>
               <% }; %>
             </ul>
             <% }); %>
